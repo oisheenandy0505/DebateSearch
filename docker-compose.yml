@@ -1,0 +1,35 @@
+services:
+  opensearch:
+    image: opensearchproject/opensearch:2.14.0
+    container_name: opensearch
+    environment:
+      - discovery.type=single-node
+      - plugins.security.disabled=true
+      - OPENSEARCH_INITIAL_ADMIN_PASSWORD=StrongPass123!
+      - bootstrap.memory_lock=true
+      - OPENSEARCH_JAVA_OPTS=-Xms1g -Xmx1g
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    ports:
+      - "9200:9200"
+    healthcheck:
+      test: ["CMD-SHELL", "curl -s http://localhost:9200 >/dev/null || exit 1"]
+      interval: 5s
+      timeout: 3s
+      retries: 30
+    # Uncomment below line if using an M-series Mac and container keeps dying:
+    # platform: linux/amd64
+
+  dashboards:
+    image: opensearchproject/opensearch-dashboards:2.14.0
+    container_name: opensearch-dashboards
+    environment:
+      - OPENSEARCH_HOSTS=["http://opensearch:9200"]
+      - DISABLE_SECURITY_DASHBOARDS_PLUGIN=true
+    ports:
+      - "5601:5601"
+    depends_on:
+      opensearch:
+        condition: service_healthy
