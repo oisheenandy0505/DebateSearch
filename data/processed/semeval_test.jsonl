@@ -1,0 +1,1250 @@
+{"id": "semeval-ID", "source": "semeval", "topic": "Target", "text": "Stance\tOpinion towards\tSentiment", "label": "none", "split": "test"}
+{"id": "semeval-10001", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10002", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-10003", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10004", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10005", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10006", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10007", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10008", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10009", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tOTHER\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-10010", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10011", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10012", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10013", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10014", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10015", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10016", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10017", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10018", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10019", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10020", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10021", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10022", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10023", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10024", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10025", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10026", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10027", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-10028", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10029", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10030", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10031", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10032", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10033", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10034", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10035", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10036", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10037", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10038", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10039", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10040", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10041", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10042", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10043", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10044", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10045", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10046", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-10047", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10048", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10049", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10050", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10051", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10052", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10053", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10054", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10055", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10056", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10057", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10058", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10059", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10060", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10061", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10062", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10063", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10064", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10065", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10066", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tOTHER\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-10067", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10068", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10069", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10070", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10071", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10072", "source": "semeval", "topic": "Atheism", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10073", "source": "semeval", "topic": "Atheism", "text": "NONE\tNO ONE\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10074", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tNO ONE\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10075", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10076", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10077", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10078", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10079", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10080", "source": "semeval", "topic": "Atheism", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10081", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10082", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10083", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10084", "source": "semeval", "topic": "Atheism", "text": "FAVOR\tTARGET\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-10085", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10086", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10087", "source": "semeval", "topic": "Atheism", "text": "NONE\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10088", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10089", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10090", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10091", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10092", "source": "semeval", "topic": "Atheism", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10093", "source": "semeval", "topic": "Atheism", "text": "NONE\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10094", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10095", "source": "semeval", "topic": "Atheism", "text": "NONE\tOTHER\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-10096", "source": "semeval", "topic": "Atheism", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10097", "source": "semeval", "topic": "Atheism", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10098", "source": "semeval", "topic": "Atheism", "text": "NONE\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10099", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10100", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10101", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10102", "source": "semeval", "topic": "Atheism", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10103", "source": "semeval", "topic": "Atheism", "text": "NONE\tNO ONE\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10104", "source": "semeval", "topic": "Atheism", "text": "NONE\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10105", "source": "semeval", "topic": "Atheism", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10106", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10107", "source": "semeval", "topic": "Atheism", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10108", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10109", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10110", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10111", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10112", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10113", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10114", "source": "semeval", "topic": "Atheism", "text": "NONE\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10115", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10116", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10117", "source": "semeval", "topic": "Atheism", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10118", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10119", "source": "semeval", "topic": "Atheism", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10120", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10121", "source": "semeval", "topic": "Atheism", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10122", "source": "semeval", "topic": "Atheism", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10123", "source": "semeval", "topic": "Atheism", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10124", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10125", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10126", "source": "semeval", "topic": "Atheism", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10127", "source": "semeval", "topic": "Atheism", "text": "NONE\tOTHER\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-10128", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10129", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10130", "source": "semeval", "topic": "Atheism", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10131", "source": "semeval", "topic": "Atheism", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10132", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10133", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10134", "source": "semeval", "topic": "Atheism", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10135", "source": "semeval", "topic": "Atheism", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10136", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10137", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10138", "source": "semeval", "topic": "Atheism", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10139", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10140", "source": "semeval", "topic": "Atheism", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10141", "source": "semeval", "topic": "Atheism", "text": "FAVOR\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10142", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10143", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10144", "source": "semeval", "topic": "Atheism", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10145", "source": "semeval", "topic": "Atheism", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10146", "source": "semeval", "topic": "Atheism", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10147", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10148", "source": "semeval", "topic": "Atheism", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10149", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10150", "source": "semeval", "topic": "Atheism", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10151", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10152", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10153", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10154", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10155", "source": "semeval", "topic": "Atheism", "text": "NONE\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10156", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-10157", "source": "semeval", "topic": "Atheism", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10158", "source": "semeval", "topic": "Atheism", "text": "FAVOR\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10159", "source": "semeval", "topic": "Atheism", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10160", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10161", "source": "semeval", "topic": "Atheism", "text": "NONE\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10162", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10163", "source": "semeval", "topic": "Atheism", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10164", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10165", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10166", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10167", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10168", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10169", "source": "semeval", "topic": "Atheism", "text": "NONE\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10170", "source": "semeval", "topic": "Atheism", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10171", "source": "semeval", "topic": "Atheism", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10172", "source": "semeval", "topic": "Atheism", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10173", "source": "semeval", "topic": "Atheism", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10174", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10175", "source": "semeval", "topic": "Atheism", "text": "NONE\tNO ONE\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10176", "source": "semeval", "topic": "Atheism", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10177", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10178", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10179", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-10180", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10181", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10182", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-10183", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tNO ONE\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10184", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10185", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10186", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10187", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10188", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10189", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10190", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10191", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10192", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10193", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10194", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10195", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10196", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10197", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10198", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10199", "source": "semeval", "topic": "Atheism", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10200", "source": "semeval", "topic": "Atheism", "text": "NONE\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10201", "source": "semeval", "topic": "Atheism", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10202", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10203", "source": "semeval", "topic": "Atheism", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10204", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10205", "source": "semeval", "topic": "Atheism", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10206", "source": "semeval", "topic": "Atheism", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10207", "source": "semeval", "topic": "Atheism", "text": "NONE\tNO ONE\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10208", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10209", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10210", "source": "semeval", "topic": "Atheism", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10211", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10212", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10213", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10214", "source": "semeval", "topic": "Atheism", "text": "NONE\tOTHER\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-10215", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10216", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10217", "source": "semeval", "topic": "Atheism", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10218", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10219", "source": "semeval", "topic": "Atheism", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10220", "source": "semeval", "topic": "Atheism", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10221", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "NONE\tNO ONE\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-10222", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10223", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10224", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "NONE\tOTHER\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-10225", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-10226", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-10227", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10228", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-10229", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10230", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10231", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10232", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10233", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10234", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10235", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "NONE\tOTHER\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-10236", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10237", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10238", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10239", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10240", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10241", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10242", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10243", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10244", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10245", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-10246", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-10247", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10248", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10249", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10250", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "NONE\tNO ONE\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10251", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10252", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10253", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10254", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-10255", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10256", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10257", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10258", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-10259", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "NONE\tNO ONE\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10260", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10261", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10262", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10263", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "NONE\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10264", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10265", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10266", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10267", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10268", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10269", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10270", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "NONE\tNO ONE\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-10271", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10272", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10273", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-10274", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10275", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tOTHER\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-10276", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "NONE\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10277", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10278", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-10279", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "NONE\tNO ONE\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-10280", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10281", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-10282", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10283", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-10284", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10285", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10286", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10287", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10288", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10289", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-10290", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10291", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "NONE\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10292", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10293", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10294", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10295", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10296", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10297", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10298", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10299", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10300", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "NONE\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10301", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10302", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10303", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10304", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10305", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10306", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10307", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10308", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10309", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10310", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-10311", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-10312", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-10313", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10314", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10315", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-10316", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10317", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10318", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10319", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "NONE\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10320", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10321", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10322", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-10323", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "NONE\tOTHER\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-10324", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10325", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10326", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10327", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10328", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10329", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10330", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10331", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "NONE\tNO ONE\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-10332", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "NONE\tNO ONE\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10333", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10334", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "NONE\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10335", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "NONE\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10336", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10337", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10338", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10339", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10340", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-10341", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10342", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10343", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "NONE\tOTHER\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-10344", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10345", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10346", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10347", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10348", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10349", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10350", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-10351", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10352", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10353", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "NONE\tNO ONE\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-10354", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-10355", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10356", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10357", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10358", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10359", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10360", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10361", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10362", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10363", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10364", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10365", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10366", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10367", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10368", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10369", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10370", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10371", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10372", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10373", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-10374", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10375", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10376", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10377", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10378", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10379", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10380", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10381", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10382", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "NONE\tNO ONE\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10383", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10384", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10385", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "NONE\tNO ONE\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10386", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10387", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10388", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10389", "source": "semeval", "topic": "Climate Change is a Real Concern", "text": "FAVOR\tTARGET\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-10390", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10391", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10392", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10393", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10394", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10395", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10396", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10397", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tOTHER\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-10398", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10399", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10400", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10401", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10402", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10403", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10404", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10405", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10406", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-10407", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10408", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10409", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10410", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10411", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10412", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10413", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10414", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10415", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10416", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10417", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10418", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10419", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10420", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10421", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10422", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10423", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10424", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-10425", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10426", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10427", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10428", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10429", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10430", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10431", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10432", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10433", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10434", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10435", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10436", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10437", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10438", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10439", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10440", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10441", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-10442", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10443", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10444", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10445", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10446", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10447", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10448", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10449", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10450", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10451", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10452", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10453", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10454", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10455", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10456", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10457", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10458", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10459", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10460", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10461", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10462", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10463", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10464", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10465", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10466", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10467", "source": "semeval", "topic": "Feminist Movement", "text": "NONE\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10468", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10469", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10470", "source": "semeval", "topic": "Feminist Movement", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10471", "source": "semeval", "topic": "Feminist Movement", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10472", "source": "semeval", "topic": "Feminist Movement", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10473", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10474", "source": "semeval", "topic": "Feminist Movement", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10475", "source": "semeval", "topic": "Feminist Movement", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10476", "source": "semeval", "topic": "Feminist Movement", "text": "NONE\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10477", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10478", "source": "semeval", "topic": "Feminist Movement", "text": "NONE\tOTHER\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-10479", "source": "semeval", "topic": "Feminist Movement", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10480", "source": "semeval", "topic": "Feminist Movement", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10481", "source": "semeval", "topic": "Feminist Movement", "text": "NONE\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10482", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10483", "source": "semeval", "topic": "Feminist Movement", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10484", "source": "semeval", "topic": "Feminist Movement", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10485", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10486", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10487", "source": "semeval", "topic": "Feminist Movement", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10488", "source": "semeval", "topic": "Feminist Movement", "text": "NONE\tOTHER\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-10489", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10490", "source": "semeval", "topic": "Feminist Movement", "text": "NONE\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10491", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10492", "source": "semeval", "topic": "Feminist Movement", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10493", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10494", "source": "semeval", "topic": "Feminist Movement", "text": "NONE\tOTHER\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-10495", "source": "semeval", "topic": "Feminist Movement", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10496", "source": "semeval", "topic": "Feminist Movement", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10497", "source": "semeval", "topic": "Feminist Movement", "text": "NONE\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10498", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10499", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10500", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10501", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10502", "source": "semeval", "topic": "Feminist Movement", "text": "NONE\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10503", "source": "semeval", "topic": "Feminist Movement", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10504", "source": "semeval", "topic": "Feminist Movement", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10505", "source": "semeval", "topic": "Feminist Movement", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10506", "source": "semeval", "topic": "Feminist Movement", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10507", "source": "semeval", "topic": "Feminist Movement", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10508", "source": "semeval", "topic": "Feminist Movement", "text": "NONE\tNO ONE\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10509", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10510", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10511", "source": "semeval", "topic": "Feminist Movement", "text": "NONE\tOTHER\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-10512", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10513", "source": "semeval", "topic": "Feminist Movement", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10514", "source": "semeval", "topic": "Feminist Movement", "text": "NONE\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10515", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10516", "source": "semeval", "topic": "Feminist Movement", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10517", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10518", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10519", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10520", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10521", "source": "semeval", "topic": "Feminist Movement", "text": "NONE\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10522", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10523", "source": "semeval", "topic": "Feminist Movement", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10524", "source": "semeval", "topic": "Feminist Movement", "text": "NONE\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10525", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10526", "source": "semeval", "topic": "Feminist Movement", "text": "NONE\tNO ONE\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10527", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10528", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10529", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10530", "source": "semeval", "topic": "Feminist Movement", "text": "NONE\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10531", "source": "semeval", "topic": "Feminist Movement", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10532", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10533", "source": "semeval", "topic": "Feminist Movement", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10534", "source": "semeval", "topic": "Feminist Movement", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10535", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10536", "source": "semeval", "topic": "Feminist Movement", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10537", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10538", "source": "semeval", "topic": "Feminist Movement", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10539", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10540", "source": "semeval", "topic": "Feminist Movement", "text": "NONE\tOTHER\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-10541", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10542", "source": "semeval", "topic": "Feminist Movement", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10543", "source": "semeval", "topic": "Feminist Movement", "text": "NONE\tNO ONE\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-10544", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10545", "source": "semeval", "topic": "Feminist Movement", "text": "NONE\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10546", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10547", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10548", "source": "semeval", "topic": "Feminist Movement", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10549", "source": "semeval", "topic": "Feminist Movement", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10550", "source": "semeval", "topic": "Feminist Movement", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10551", "source": "semeval", "topic": "Feminist Movement", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10552", "source": "semeval", "topic": "Feminist Movement", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10553", "source": "semeval", "topic": "Feminist Movement", "text": "NONE\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10554", "source": "semeval", "topic": "Feminist Movement", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10555", "source": "semeval", "topic": "Feminist Movement", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10556", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10557", "source": "semeval", "topic": "Feminist Movement", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10558", "source": "semeval", "topic": "Feminist Movement", "text": "NONE\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10559", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10560", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10561", "source": "semeval", "topic": "Feminist Movement", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10562", "source": "semeval", "topic": "Feminist Movement", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10563", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10564", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10565", "source": "semeval", "topic": "Feminist Movement", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10566", "source": "semeval", "topic": "Feminist Movement", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10567", "source": "semeval", "topic": "Feminist Movement", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10568", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10569", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10570", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10571", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10572", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10573", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10574", "source": "semeval", "topic": "Feminist Movement", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10575", "source": "semeval", "topic": "Feminist Movement", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10576", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10577", "source": "semeval", "topic": "Feminist Movement", "text": "FAVOR\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10578", "source": "semeval", "topic": "Feminist Movement", "text": "FAVOR\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10579", "source": "semeval", "topic": "Feminist Movement", "text": "FAVOR\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10580", "source": "semeval", "topic": "Feminist Movement", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10581", "source": "semeval", "topic": "Feminist Movement", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10582", "source": "semeval", "topic": "Feminist Movement", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10583", "source": "semeval", "topic": "Feminist Movement", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10584", "source": "semeval", "topic": "Feminist Movement", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10585", "source": "semeval", "topic": "Feminist Movement", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10586", "source": "semeval", "topic": "Feminist Movement", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10587", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10588", "source": "semeval", "topic": "Feminist Movement", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10589", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10590", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10591", "source": "semeval", "topic": "Feminist Movement", "text": "FAVOR\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10592", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10593", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10594", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10595", "source": "semeval", "topic": "Feminist Movement", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10596", "source": "semeval", "topic": "Feminist Movement", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10597", "source": "semeval", "topic": "Feminist Movement", "text": "NONE\tNO ONE\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10598", "source": "semeval", "topic": "Feminist Movement", "text": "FAVOR\tTARGET\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-10599", "source": "semeval", "topic": "Feminist Movement", "text": "NONE\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10600", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10601", "source": "semeval", "topic": "Feminist Movement", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10602", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10603", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10604", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10605", "source": "semeval", "topic": "Feminist Movement", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10606", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10607", "source": "semeval", "topic": "Feminist Movement", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10608", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10609", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10610", "source": "semeval", "topic": "Feminist Movement", "text": "FAVOR\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10611", "source": "semeval", "topic": "Feminist Movement", "text": "FAVOR\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10612", "source": "semeval", "topic": "Feminist Movement", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10613", "source": "semeval", "topic": "Feminist Movement", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10614", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10615", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10616", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10617", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10618", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10619", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10620", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10621", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10622", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10623", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10624", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10625", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10626", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10627", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10628", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10629", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10630", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-10631", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10632", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10633", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10634", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10635", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10636", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10637", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10638", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10639", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-10640", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tNO ONE\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10641", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10642", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10643", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10644", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10645", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10646", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10647", "source": "semeval", "topic": "Feminist Movement", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10648", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10649", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10650", "source": "semeval", "topic": "Feminist Movement", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10651", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10652", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10653", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10654", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10655", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10656", "source": "semeval", "topic": "Feminist Movement", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10657", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10658", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10659", "source": "semeval", "topic": "Feminist Movement", "text": "NONE\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10660", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10661", "source": "semeval", "topic": "Feminist Movement", "text": "NONE\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10662", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10663", "source": "semeval", "topic": "Feminist Movement", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10664", "source": "semeval", "topic": "Feminist Movement", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10665", "source": "semeval", "topic": "Feminist Movement", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10666", "source": "semeval", "topic": "Feminist Movement", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10667", "source": "semeval", "topic": "Feminist Movement", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10668", "source": "semeval", "topic": "Feminist Movement", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10669", "source": "semeval", "topic": "Feminist Movement", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10670", "source": "semeval", "topic": "Feminist Movement", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10671", "source": "semeval", "topic": "Feminist Movement", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10672", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10673", "source": "semeval", "topic": "Feminist Movement", "text": "FAVOR\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10674", "source": "semeval", "topic": "Feminist Movement", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10675", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10676", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10677", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10678", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10679", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10680", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10681", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10682", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10683", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10684", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10685", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10686", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10687", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10688", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10689", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10690", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10691", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10692", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10693", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tNO ONE\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10694", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10695", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10696", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10697", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10698", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10699", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10700", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10701", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10702", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tNO ONE\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10703", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10704", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10705", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10706", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10707", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10708", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10709", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10710", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10711", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10712", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-10713", "source": "semeval", "topic": "Hillary Clinton", "text": "NONE\tOTHER\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-10714", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10715", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10716", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10717", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10718", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10719", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10720", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10721", "source": "semeval", "topic": "Hillary Clinton", "text": "NONE\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10722", "source": "semeval", "topic": "Hillary Clinton", "text": "NONE\tNO ONE\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10723", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10724", "source": "semeval", "topic": "Hillary Clinton", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10725", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10726", "source": "semeval", "topic": "Hillary Clinton", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10727", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10728", "source": "semeval", "topic": "Hillary Clinton", "text": "NONE\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10729", "source": "semeval", "topic": "Hillary Clinton", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10730", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10731", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10732", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10733", "source": "semeval", "topic": "Hillary Clinton", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10734", "source": "semeval", "topic": "Hillary Clinton", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10735", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10736", "source": "semeval", "topic": "Hillary Clinton", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10737", "source": "semeval", "topic": "Hillary Clinton", "text": "NONE\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10738", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10739", "source": "semeval", "topic": "Hillary Clinton", "text": "NONE\tNO ONE\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10740", "source": "semeval", "topic": "Hillary Clinton", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10741", "source": "semeval", "topic": "Hillary Clinton", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10742", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10743", "source": "semeval", "topic": "Hillary Clinton", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10744", "source": "semeval", "topic": "Hillary Clinton", "text": "NONE\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10745", "source": "semeval", "topic": "Hillary Clinton", "text": "NONE\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10746", "source": "semeval", "topic": "Hillary Clinton", "text": "NONE\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10747", "source": "semeval", "topic": "Hillary Clinton", "text": "FAVOR\tTARGET\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-10748", "source": "semeval", "topic": "Hillary Clinton", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10749", "source": "semeval", "topic": "Hillary Clinton", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10750", "source": "semeval", "topic": "Hillary Clinton", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10751", "source": "semeval", "topic": "Hillary Clinton", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10752", "source": "semeval", "topic": "Hillary Clinton", "text": "NONE\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10753", "source": "semeval", "topic": "Hillary Clinton", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10754", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10755", "source": "semeval", "topic": "Hillary Clinton", "text": "NONE\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10756", "source": "semeval", "topic": "Hillary Clinton", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10757", "source": "semeval", "topic": "Hillary Clinton", "text": "NONE\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10758", "source": "semeval", "topic": "Hillary Clinton", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10759", "source": "semeval", "topic": "Hillary Clinton", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10760", "source": "semeval", "topic": "Hillary Clinton", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10761", "source": "semeval", "topic": "Hillary Clinton", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10762", "source": "semeval", "topic": "Hillary Clinton", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10763", "source": "semeval", "topic": "Hillary Clinton", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10764", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10765", "source": "semeval", "topic": "Hillary Clinton", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10766", "source": "semeval", "topic": "Hillary Clinton", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10767", "source": "semeval", "topic": "Hillary Clinton", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10768", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10769", "source": "semeval", "topic": "Hillary Clinton", "text": "NONE\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10770", "source": "semeval", "topic": "Hillary Clinton", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10771", "source": "semeval", "topic": "Hillary Clinton", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10772", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10773", "source": "semeval", "topic": "Hillary Clinton", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10774", "source": "semeval", "topic": "Hillary Clinton", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10775", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10776", "source": "semeval", "topic": "Hillary Clinton", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10777", "source": "semeval", "topic": "Hillary Clinton", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10778", "source": "semeval", "topic": "Hillary Clinton", "text": "NONE\tOTHER\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-10779", "source": "semeval", "topic": "Hillary Clinton", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10780", "source": "semeval", "topic": "Hillary Clinton", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10781", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10782", "source": "semeval", "topic": "Hillary Clinton", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10783", "source": "semeval", "topic": "Hillary Clinton", "text": "NONE\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10784", "source": "semeval", "topic": "Hillary Clinton", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10785", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10786", "source": "semeval", "topic": "Hillary Clinton", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10787", "source": "semeval", "topic": "Hillary Clinton", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10788", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10789", "source": "semeval", "topic": "Hillary Clinton", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10790", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10791", "source": "semeval", "topic": "Hillary Clinton", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10792", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10793", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10794", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10795", "source": "semeval", "topic": "Hillary Clinton", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10796", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10797", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10798", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10799", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10800", "source": "semeval", "topic": "Hillary Clinton", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10801", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10802", "source": "semeval", "topic": "Hillary Clinton", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10803", "source": "semeval", "topic": "Hillary Clinton", "text": "NONE\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10804", "source": "semeval", "topic": "Hillary Clinton", "text": "FAVOR\tTARGET\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-10805", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10806", "source": "semeval", "topic": "Hillary Clinton", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10807", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10808", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10809", "source": "semeval", "topic": "Hillary Clinton", "text": "NONE\tNO ONE\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-10810", "source": "semeval", "topic": "Hillary Clinton", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10811", "source": "semeval", "topic": "Hillary Clinton", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10812", "source": "semeval", "topic": "Hillary Clinton", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10813", "source": "semeval", "topic": "Hillary Clinton", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10814", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10815", "source": "semeval", "topic": "Hillary Clinton", "text": "NONE\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10816", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10817", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10818", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10819", "source": "semeval", "topic": "Hillary Clinton", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10820", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10821", "source": "semeval", "topic": "Hillary Clinton", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10822", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10823", "source": "semeval", "topic": "Hillary Clinton", "text": "NONE\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10824", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10825", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10826", "source": "semeval", "topic": "Hillary Clinton", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10827", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tOTHER\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-10828", "source": "semeval", "topic": "Hillary Clinton", "text": "NONE\tNO ONE\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10829", "source": "semeval", "topic": "Hillary Clinton", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10830", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10831", "source": "semeval", "topic": "Hillary Clinton", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10832", "source": "semeval", "topic": "Hillary Clinton", "text": "NONE\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10833", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10834", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10835", "source": "semeval", "topic": "Hillary Clinton", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10836", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10837", "source": "semeval", "topic": "Hillary Clinton", "text": "FAVOR\tTARGET\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-10838", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10839", "source": "semeval", "topic": "Hillary Clinton", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10840", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10841", "source": "semeval", "topic": "Hillary Clinton", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10842", "source": "semeval", "topic": "Hillary Clinton", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10843", "source": "semeval", "topic": "Hillary Clinton", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10844", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10845", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10846", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10847", "source": "semeval", "topic": "Hillary Clinton", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10848", "source": "semeval", "topic": "Hillary Clinton", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10849", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10850", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10851", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10852", "source": "semeval", "topic": "Hillary Clinton", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10853", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10854", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10855", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10856", "source": "semeval", "topic": "Hillary Clinton", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10857", "source": "semeval", "topic": "Hillary Clinton", "text": "NONE\tNO ONE\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10858", "source": "semeval", "topic": "Hillary Clinton", "text": "NONE\tNO ONE\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-10859", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10860", "source": "semeval", "topic": "Hillary Clinton", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10861", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10862", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10863", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10864", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10865", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10866", "source": "semeval", "topic": "Hillary Clinton", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10867", "source": "semeval", "topic": "Hillary Clinton", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10868", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10869", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10870", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10871", "source": "semeval", "topic": "Hillary Clinton", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10872", "source": "semeval", "topic": "Hillary Clinton", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10873", "source": "semeval", "topic": "Hillary Clinton", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10874", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10875", "source": "semeval", "topic": "Hillary Clinton", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10876", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10877", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10878", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10879", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10880", "source": "semeval", "topic": "Hillary Clinton", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10881", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10882", "source": "semeval", "topic": "Hillary Clinton", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10883", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10884", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10885", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10886", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10887", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10888", "source": "semeval", "topic": "Hillary Clinton", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10889", "source": "semeval", "topic": "Hillary Clinton", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10890", "source": "semeval", "topic": "Hillary Clinton", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10891", "source": "semeval", "topic": "Hillary Clinton", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10892", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10893", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10894", "source": "semeval", "topic": "Hillary Clinton", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10895", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10896", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10897", "source": "semeval", "topic": "Hillary Clinton", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10898", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10899", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10900", "source": "semeval", "topic": "Hillary Clinton", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10901", "source": "semeval", "topic": "Hillary Clinton", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10902", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10903", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10904", "source": "semeval", "topic": "Hillary Clinton", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10905", "source": "semeval", "topic": "Hillary Clinton", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10906", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-10907", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10908", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10909", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10910", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10911", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10912", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10913", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10914", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10915", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10916", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10917", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10918", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10919", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10920", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10921", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tNO ONE\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10922", "source": "semeval", "topic": "Hillary Clinton", "text": "FAVOR\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10923", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10924", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10925", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10926", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10927", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10928", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10929", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10930", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10931", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10932", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10933", "source": "semeval", "topic": "Hillary Clinton", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10934", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10935", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10936", "source": "semeval", "topic": "Hillary Clinton", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10937", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10938", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10939", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10940", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10941", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tOTHER\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-10942", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10943", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10944", "source": "semeval", "topic": "Hillary Clinton", "text": "NONE\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10945", "source": "semeval", "topic": "Hillary Clinton", "text": "NONE\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10946", "source": "semeval", "topic": "Hillary Clinton", "text": "NONE\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10947", "source": "semeval", "topic": "Hillary Clinton", "text": "NONE\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10948", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10949", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10950", "source": "semeval", "topic": "Hillary Clinton", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10951", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10952", "source": "semeval", "topic": "Hillary Clinton", "text": "NONE\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10953", "source": "semeval", "topic": "Hillary Clinton", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10954", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10955", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10956", "source": "semeval", "topic": "Hillary Clinton", "text": "NONE\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10957", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10958", "source": "semeval", "topic": "Hillary Clinton", "text": "NONE\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10959", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10960", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10961", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10962", "source": "semeval", "topic": "Hillary Clinton", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10963", "source": "semeval", "topic": "Hillary Clinton", "text": "NONE\tNO ONE\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-10964", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10965", "source": "semeval", "topic": "Hillary Clinton", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10966", "source": "semeval", "topic": "Hillary Clinton", "text": "NONE\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10967", "source": "semeval", "topic": "Hillary Clinton", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10968", "source": "semeval", "topic": "Hillary Clinton", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10969", "source": "semeval", "topic": "Hillary Clinton", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10970", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10971", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10972", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10973", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10974", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10975", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tOTHER\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-10976", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10977", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10978", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-10979", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10980", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10981", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10982", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10983", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10984", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10985", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10986", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10987", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10988", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10989", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tOTHER\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-10990", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10991", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10992", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10993", "source": "semeval", "topic": "Legalization of Abortion", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10994", "source": "semeval", "topic": "Legalization of Abortion", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10995", "source": "semeval", "topic": "Legalization of Abortion", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10996", "source": "semeval", "topic": "Legalization of Abortion", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10997", "source": "semeval", "topic": "Legalization of Abortion", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10998", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-10999", "source": "semeval", "topic": "Legalization of Abortion", "text": "NONE\tNO ONE\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-11000", "source": "semeval", "topic": "Legalization of Abortion", "text": "NONE\tNO ONE\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-11001", "source": "semeval", "topic": "Legalization of Abortion", "text": "NONE\tNO ONE\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-11002", "source": "semeval", "topic": "Legalization of Abortion", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11003", "source": "semeval", "topic": "Legalization of Abortion", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-11004", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11005", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11006", "source": "semeval", "topic": "Legalization of Abortion", "text": "NONE\tNO ONE\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11007", "source": "semeval", "topic": "Legalization of Abortion", "text": "NONE\tNO ONE\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-11008", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11009", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-11010", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11011", "source": "semeval", "topic": "Legalization of Abortion", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11012", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-11013", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11014", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11015", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11016", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11017", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-11018", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11019", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-11020", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-11021", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-11022", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11023", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11024", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11025", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11026", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11027", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11028", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-11029", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11030", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-11031", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11032", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-11033", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11034", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11035", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11036", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11037", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11038", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11039", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11040", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tNO ONE\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-11041", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11042", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11043", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11044", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11045", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11046", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11047", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11048", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11049", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11050", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11051", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-11052", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11053", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11054", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-11055", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11056", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11057", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tOTHER\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-11058", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11059", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-11060", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-11061", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-11062", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11063", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11064", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11065", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11066", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11067", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11068", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11069", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11070", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-11071", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-11072", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11073", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11074", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11075", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11076", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-11077", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11078", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-11079", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11080", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11081", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11082", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-11083", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11084", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11085", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11086", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11087", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11088", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11089", "source": "semeval", "topic": "Legalization of Abortion", "text": "NONE\tNO ONE\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11090", "source": "semeval", "topic": "Legalization of Abortion", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11091", "source": "semeval", "topic": "Legalization of Abortion", "text": "NONE\tOTHER\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-11092", "source": "semeval", "topic": "Legalization of Abortion", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11093", "source": "semeval", "topic": "Legalization of Abortion", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11094", "source": "semeval", "topic": "Legalization of Abortion", "text": "NONE\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-11095", "source": "semeval", "topic": "Legalization of Abortion", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11096", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11097", "source": "semeval", "topic": "Legalization of Abortion", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-11098", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11099", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-11100", "source": "semeval", "topic": "Legalization of Abortion", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11101", "source": "semeval", "topic": "Legalization of Abortion", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11102", "source": "semeval", "topic": "Legalization of Abortion", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11103", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11104", "source": "semeval", "topic": "Legalization of Abortion", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11105", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11106", "source": "semeval", "topic": "Legalization of Abortion", "text": "NONE\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-11107", "source": "semeval", "topic": "Legalization of Abortion", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11108", "source": "semeval", "topic": "Legalization of Abortion", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11109", "source": "semeval", "topic": "Legalization of Abortion", "text": "FAVOR\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-11110", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11111", "source": "semeval", "topic": "Legalization of Abortion", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11112", "source": "semeval", "topic": "Legalization of Abortion", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11113", "source": "semeval", "topic": "Legalization of Abortion", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11114", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11115", "source": "semeval", "topic": "Legalization of Abortion", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11116", "source": "semeval", "topic": "Legalization of Abortion", "text": "NONE\tOTHER\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-11117", "source": "semeval", "topic": "Legalization of Abortion", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11118", "source": "semeval", "topic": "Legalization of Abortion", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-11119", "source": "semeval", "topic": "Legalization of Abortion", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11120", "source": "semeval", "topic": "Legalization of Abortion", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11121", "source": "semeval", "topic": "Legalization of Abortion", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11122", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11123", "source": "semeval", "topic": "Legalization of Abortion", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11124", "source": "semeval", "topic": "Legalization of Abortion", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11125", "source": "semeval", "topic": "Legalization of Abortion", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11126", "source": "semeval", "topic": "Legalization of Abortion", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11127", "source": "semeval", "topic": "Legalization of Abortion", "text": "FAVOR\tTARGET\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-11128", "source": "semeval", "topic": "Legalization of Abortion", "text": "FAVOR\tTARGET\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-11129", "source": "semeval", "topic": "Legalization of Abortion", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11130", "source": "semeval", "topic": "Legalization of Abortion", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11131", "source": "semeval", "topic": "Legalization of Abortion", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11132", "source": "semeval", "topic": "Legalization of Abortion", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11133", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11134", "source": "semeval", "topic": "Legalization of Abortion", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11135", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11136", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11137", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11138", "source": "semeval", "topic": "Legalization of Abortion", "text": "NONE\tNO ONE\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-11139", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11140", "source": "semeval", "topic": "Legalization of Abortion", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11141", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11142", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11143", "source": "semeval", "topic": "Legalization of Abortion", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11144", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11145", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11146", "source": "semeval", "topic": "Legalization of Abortion", "text": "NONE\tNO ONE\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11147", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-11148", "source": "semeval", "topic": "Legalization of Abortion", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-11149", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-11150", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11151", "source": "semeval", "topic": "Legalization of Abortion", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11152", "source": "semeval", "topic": "Legalization of Abortion", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11153", "source": "semeval", "topic": "Legalization of Abortion", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11154", "source": "semeval", "topic": "Legalization of Abortion", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11155", "source": "semeval", "topic": "Legalization of Abortion", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11156", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11157", "source": "semeval", "topic": "Legalization of Abortion", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11158", "source": "semeval", "topic": "Legalization of Abortion", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11159", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-11160", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11161", "source": "semeval", "topic": "Legalization of Abortion", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-11162", "source": "semeval", "topic": "Legalization of Abortion", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11163", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11164", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-11165", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11166", "source": "semeval", "topic": "Legalization of Abortion", "text": "NONE\tNO ONE\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-11167", "source": "semeval", "topic": "Legalization of Abortion", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11168", "source": "semeval", "topic": "Legalization of Abortion", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11169", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-11170", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11171", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-11172", "source": "semeval", "topic": "Legalization of Abortion", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11173", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11174", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11175", "source": "semeval", "topic": "Legalization of Abortion", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11176", "source": "semeval", "topic": "Legalization of Abortion", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11177", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-11178", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11179", "source": "semeval", "topic": "Legalization of Abortion", "text": "NONE\tNO ONE\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11180", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11181", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-11182", "source": "semeval", "topic": "Legalization of Abortion", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11183", "source": "semeval", "topic": "Legalization of Abortion", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11184", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11185", "source": "semeval", "topic": "Legalization of Abortion", "text": "NONE\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-11186", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11187", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11188", "source": "semeval", "topic": "Legalization of Abortion", "text": "NONE\tNO ONE\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-11189", "source": "semeval", "topic": "Legalization of Abortion", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11190", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11191", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-11192", "source": "semeval", "topic": "Legalization of Abortion", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11193", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11194", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11195", "source": "semeval", "topic": "Legalization of Abortion", "text": "NONE\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-11196", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11197", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11198", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-11199", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-11200", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11201", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11202", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11203", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11204", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11205", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-11206", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-11207", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11208", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11209", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11210", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11211", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11212", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11213", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11214", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11215", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-11216", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-11217", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-11218", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11219", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-11220", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11221", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11222", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11223", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-11224", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11225", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-11226", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-11227", "source": "semeval", "topic": "Legalization of Abortion", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11228", "source": "semeval", "topic": "Legalization of Abortion", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11229", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-11230", "source": "semeval", "topic": "Legalization of Abortion", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11231", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-11232", "source": "semeval", "topic": "Legalization of Abortion", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11233", "source": "semeval", "topic": "Legalization of Abortion", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11234", "source": "semeval", "topic": "Legalization of Abortion", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11235", "source": "semeval", "topic": "Legalization of Abortion", "text": "FAVOR\tTARGET\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-11236", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11237", "source": "semeval", "topic": "Legalization of Abortion", "text": "NONE\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-11238", "source": "semeval", "topic": "Legalization of Abortion", "text": "FAVOR\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11239", "source": "semeval", "topic": "Legalization of Abortion", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11240", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11241", "source": "semeval", "topic": "Legalization of Abortion", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11242", "source": "semeval", "topic": "Legalization of Abortion", "text": "NONE\tOTHER\tPOSITIVE", "label": "none", "split": "test"}
+{"id": "semeval-11243", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11244", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11245", "source": "semeval", "topic": "Legalization of Abortion", "text": "NONE\tOTHER\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11246", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-11247", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEITHER", "label": "none", "split": "test"}
+{"id": "semeval-11248", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEGATIVE", "label": "none", "split": "test"}
+{"id": "semeval-11249", "source": "semeval", "topic": "Legalization of Abortion", "text": "AGAINST\tTARGET\tNEITHER", "label": "none", "split": "test"}
