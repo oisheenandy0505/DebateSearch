@@ -45,33 +45,6 @@ const sourceOptions = [
   { value: "reddit", label: "Reddit" },
   { value: "semeval", label: "Twitter/SemEval" },
 ];
-const STOPWORDS = new Set([
-  "the", "and", "for", "that", "with", "this", "from", "have", "was", "will", "your",
-  "about", "they", "their", "what", "when", "where", "which", "would", "there", "could",
-  "should", "into", "because", "been", "were", "cant", "can't", "dont", "don't", "doesnt",
-  "doesn't", "im", "i'm", "its", "it's", "you", "are", "but", "not", "all", "any", "our",
-  "his", "her", "she", "him", "them", "who", "why", "how", "too", "very", "much", "than",
-  "just", "like", "also", "really", "more", "less", "even", "some", "most"
-]);
-
-function extractKeywords(items, limit = 3) {
-  const counts = new Map();
-  for (const item of items) {
-    const text = (item.text || "").toLowerCase();
-    const tokens = text
-      .replace(/[^a-z0-9\s]/g, " ")
-      .split(/\s+/)
-      .filter((token) => token.length > 3 && !STOPWORDS.has(token));
-    tokens.forEach((token) => {
-      counts.set(token, (counts.get(token) || 0) + 1);
-    });
-  }
-  return [...counts.entries()]
-    .sort((a, b) => b[1] - a[1])
-    .slice(0, limit)
-    .map(([token]) => token);
-}
-
 function partitionBySource(items, src) {
   if (!src || src === "all") return items;
   const needle = normalizeSource(src);
@@ -238,33 +211,17 @@ export default function App() {
     if (qref.current) qref.current.focus();
   }, []);
 
-  const { rendered, stanceSummaries } = useMemo(() => {
+  const rendered = useMemo(() => {
     const filteredSorted = {};
-    const stats = {};
     for (const stance of stanceOrder) {
       const bucket = clusters.find((c) => c.stance === stance);
       const items = bucket?.items || [];
       const f = partitionBySource(items, selectedSource);
-      const sorted = sortItems(f, sortBy);
-      filteredSorted[stance] = sorted;
-      const latest = sorted.reduce((latestTs, item) => {
-        if (!item.timestamp) return latestTs;
-        const ts = Date.parse(item.timestamp);
-        if (!latestTs || ts > latestTs) return ts;
-        return latestTs;
-      }, null);
-      stats[stance] = {
-        latest: latest ? new Date(latest).toLocaleDateString() : null,
-        keywords: extractKeywords(sorted, 3),
-      };
+      filteredSorted[stance] = sortItems(f, sortBy);
     }
-    return { rendered: filteredSorted, stanceSummaries: stats };
+    return filteredSorted;
   }, [clusters, selectedSource, sortBy]);
   const sortLabel = sortBy === "recent" ? "Most recent" : "Confidence";
-  const totalVisible = useMemo(
-    () => stanceOrder.reduce((sum, stance) => sum + ((rendered[stance] || []).length), 0),
-    [rendered]
-  );
   const savedIds = useMemo(() => new Set(savedItems.map((it) => it.id)), [savedItems]);
 
   function handleToggleSave(item, stance) {

@@ -23,15 +23,3 @@ def redact_text(s: str):
     s = HANDLE_RE.sub(" ", s)
     masked = (s != orig)
     return s, masked
-
-# --- NSFW / toxicity heuristics (lightweight, toggle-able) ---
-# Keep list short & general; you can extend for your demo topics.
-NSFW_BADWORDS = {
-    "fuck","shit","asshole","bitch","bastard","slur","porn","xxx","nsfw",
-    "rape","kill yourself","go die","nigger","faggot"  # include a few strong slurs for filtering
-}
-def is_nsfw(s: str):
-    if not s: 
-        return False
-    low = s.lower()
-    return any(w in low for w in NSFW_BADWORDS)
