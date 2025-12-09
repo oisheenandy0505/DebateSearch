@@ -22,10 +22,9 @@ import math
 from collections import Counter, defaultdict
 from typing import Dict, Set, Tuple, Optional
 
-# ---------------- SimHash helpers ----------------
-
+# SimHash helpers ---------------------------------------------------
 def _tokens_for_simhash(text: str):
-    # simple 3-gram shingle of alnum tokens
+    # Yield unigram/bigram/trigram shingles so the hash captures short phrases.
     words = re.findall(r"[a-z0-9]+", text.lower())
     for i in range(len(words)):
         yield words[i]
@@ -46,8 +45,6 @@ def simhash64(text: str) -> int:
             out |= (1 << i)
     return out
 
-# ---------- Fast near-dupe via buckets ----------
-
 _SIMHASH_BUCKETS = defaultdict(list)
 
 def _bucket_key(sh: int, bucket_bits: int = 12) -> int:
@@ -57,11 +54,11 @@ def near_dupe(sh: int, simhash_tol: int = 4, bucket_bits: int = 12, max_per_buck
     """Return True if sh is near-duplicate of something already seen."""
     b = _bucket_key(sh, bucket_bits)
     cand = _SIMHASH_BUCKETS.get(b, [])
-    # bounded comparisons within bucket
+    # Only compare comments inside the same prefix bucket to stay fast.
     for prev in cand:
         if (sh ^ prev).bit_count() <= simhash_tol:
             return True
-    # learn
+    # Remember the hash for future comparisons but keep buckets bounded.
     lst = _SIMHASH_BUCKETS[b]
     if len(lst) < max_per_bucket:
         lst.append(sh)
@@ -69,8 +66,7 @@ def near_dupe(sh: int, simhash_tol: int = 4, bucket_bits: int = 12, max_per_buck
         lst.pop(0); lst.append(sh)
     return False
 
-# ---------------- Heuristics & lexica ----------------
-
+# Text heuristics ---------------------------------------------------
 RE_ALNUM   = re.compile(r"[A-Za-z0-9]")
 RE_WORD    = re.compile(r"[A-Za-z']+")
 RE_NSFW    = re.compile(r"\b(fuck|shit|bitch|porn|nsfw|bastard|slut|dick|cunt)\b", re.I)
@@ -85,8 +81,7 @@ def _signal_score(text: str, cues: Dict[str, Dict[str, float]], stop: Set[str]) 
     if not words:
         return 0.0
     non_stop = sum(1 for w in words if w not in stop)
-    density = non_stop / max(5, len(words))    # [0..1]
-    # bounded blend
+    density = non_stop / max(5, len(words))    # clamp to [0..1]
     return max(0.0, min(1.0, 0.5 * density + 0.5 * (1 if cue > 0 else 0)))
 
 def quality_gate(
@@ -97,27 +92,23 @@ def quality_gate(
     simhash_tol: Optional[int] = 4,
     bucket_bits: int = 12,
 ) -> Tuple[float, bool, bool, Optional[int], str]:
-
-    # fast rejects
+    """Return (quality, nsfw, stanceable, simhash, reason) for a snippet."""
     t = text.strip()
     if len(t) < 40:
         return (0.2, False, False, None, "short")
 
     alnum = sum(1 for ch in t if RE_ALNUM.match(ch))
     ratio = alnum / max(1, len(t))
-    if ratio < 0.50:  # too many symbols/links/junk
+    if ratio < 0.50:  # mostly symbols/links/junk
         return (0.3, False, False, None, "symbols")
 
-    # nsfw flag (coarse)
     nsfw = bool(RE_NSFW.search(t))
 
-    # stance signal
     sig = _signal_score(t, cues, stop)
     stanceable = sig >= 0.25
-    base_q = 0.4 + 0.6 * sig         # scale into [0.4..1.0]
+    base_q = 0.4 + 0.6 * sig
     qscore = max(0.0, min(1.0, base_q - (0.1 if nsfw else 0.0)))
 
-    # skip simhash for low-signal/very short to save time
     sh = None
     if simhash_tol is not None and len(t) >= 60 and stanceable:
         sh = simhash64(t)

@@ -20,13 +20,13 @@ from argparse import ArgumentParser
 from glob import glob
 
 
-# project paths
+# Project paths -----------------------------------------------------
 ROOT = Path(__file__).resolve().parents[1]
 RAW  = ROOT / "data" / "raw" / "kaggle"
 PRO  = ROOT / "data" / "processed"
 PRO.mkdir(parents=True, exist_ok=True)
 
-# optional fast JSON
+# Optional fast JSON ------------------------------------------------
 try:
     import orjson as _json
     loads = _json.loads
@@ -34,19 +34,19 @@ except Exception:
     import json as _json
     loads = _json.loads
 
-# tiny JSON dumper for output to keep ASCII & portability
+# Tiny JSON dumper for consistent UTF-8 output.
 def dumps(obj):
     import json
     return json.dumps(obj, ensure_ascii=False)
 
-# load cues
+# Load cue lexicon if present; fall back to empty weights.
 CUE_PATH = ROOT / "models" / "stance_cues.json"
 try:
     CUES = _json.loads(CUE_PATH.read_bytes())
 except Exception:
     CUES = {"favor": {}, "against": {}}
 
-# stopwords
+# Ensure stopword list exists before import.
 def ensure_nltk_stopwords():
     try:
         from nltk.corpus import stopwords  # noqa
@@ -58,14 +58,14 @@ ensure_nltk_stopwords()
 from nltk.corpus import stopwords  # noqa
 STOP = set(stopwords.words("english"))
 
-# quality gate
+# Quality gate is shared with backend ingestion.
 try:
     from backend.utils.quality import quality_gate
 except Exception:
     print("ERROR: backend/utils/quality.py not found or import failed.", file=sys.stderr)
     raise
 
-# PII regexes
+# PII regexes -------------------------------------------------------
 RE_EMAIL   = re.compile(r"\b[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[A-Za-z]{2,}\b")
 RE_PHONE   = re.compile(r"\b(?:\+?\d{1,3}[-.\s]?)?(?:\(?\d{3}\)?[-.\s]?){2}\d{4}\b")
 RE_URL     = re.compile(r"(https?://\S+|\bwww\.\S+)")
@@ -106,7 +106,7 @@ def main():
     if not files:
         print("No reddit*.jsonl in data/raw/", file=sys.stderr)
 
-    # lazy import tqdm only if needed
+    # Lazy import tqdm only when verbose progress is requested.
     tqdm = None
     if args.verbose:
         try:

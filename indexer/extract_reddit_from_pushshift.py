@@ -111,7 +111,7 @@ def is_nsfw(text: str) -> bool:
 
 
 def keep_comment(obj: dict) -> Tuple[bool, str]:
-    # Basic required fields
+    # Pull the pieces we inspect and normalize the body once upfront.
     body = obj.get("body") or ""
     subreddit = obj.get("subreddit") or ""
     score = obj.get("score") or 0

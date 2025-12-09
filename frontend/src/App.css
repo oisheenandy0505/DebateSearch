@@ -211,10 +211,30 @@ body {
 
 .switch {
   display: inline-flex;
-  align-items: center;
-  gap: 8px;
+  align-items: flex-start;
+  gap: 12px;
   color: var(--muted);
   user-select: none;
+}
+
+.switch input[type="checkbox"] {
+  margin-top: 4px;
+}
+
+.switch-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.switch-title {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.switch-hint {
+  font-size: 12px;
+  color: var(--muted);
 }
 
 .error {

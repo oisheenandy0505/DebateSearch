@@ -34,7 +34,7 @@ from transformers import (
 
 from peft import LoraConfig, TaskType, get_peft_model
 
-# ----------------- Paths & constants -----------------
+# Paths & runtime knobs --------------------------------------------
 ROOT = Path(__file__).resolve().parents[2]
 PRO  = ROOT / "data" / "processed"
 MODEL_DIR = ROOT / "models" / "stance_distilbert"
@@ -44,7 +44,7 @@ BASE_MODEL = os.getenv("BASE_MODEL", "distilbert-base-uncased")
 LABEL2ID = {"favor":0, "against":1, "none":2}
 ID2LABEL = {v:k for k,v in LABEL2ID.items()}
 
-MAX_LEN   = int(os.getenv("MAX_LEN", "128"))   # default shorter for speed
+MAX_LEN   = int(os.getenv("MAX_LEN", "128"))   # shorter window keeps adapters quick
 EPOCHS    = int(os.getenv("EPOCHS", "2"))
 MAX_STEPS = int(os.getenv("MAX_STEPS", "0"))
 SUBCAP    = int(os.getenv("SUBSAMPLE_PER_CLASS", "0"))
@@ -79,7 +79,7 @@ def supported_kwargs(d: dict):
 
 def subsample_balanced(ds: Dataset, cap: int) -> Dataset:
     if cap <= 0: return ds
-    # collect indices per class, then cap
+    # Collect indices per class, then keep up to `cap` per label.
     byc = defaultdict(list)
     for i, y in enumerate(ds["labels"]):
         byc[int(y)].append(i)
@@ -95,7 +95,7 @@ class WeightedTrainer(Trainer):
     def __init__(self, class_weights=None, **kwargs):
         super().__init__(**kwargs)
         self.class_weights = class_weights
-        self.loss_fct = nn.CrossEntropyLoss(weight=None)  # set on first forward
+        self.loss_fct = nn.CrossEntropyLoss(weight=None)  # populated during first forward pass
 
     def compute_loss(self, model, inputs, return_outputs=False, **kwargs):
         labels = inputs.get("labels")
@@ -124,11 +124,11 @@ def main():
     ds_tr_raw = make_ds(train_path)
     ds_de_raw = make_ds(dev_path)
 
-    # Optional class-balanced subsample for dev speed
+    # Optionally downsample each label to shrink dev runs.
     if SUBCAP > 0:
         ds_tr_raw = subsample_balanced(ds_tr_raw, SUBCAP)
 
-    # Class weights (inverse freq)
+    # Class weights encourage macro F1 by offsetting imbalance.
     cnt = Counter(ds_tr_raw["labels"])
     total = sum(cnt.values())
     weights = [ total / (3.0 * max(1, cnt.get(l,1))) for l in [0,1,2] ]
@@ -151,12 +151,12 @@ def main():
     )
     peft_model = get_peft_model(base, lora_cfg)
 
-    # Mac MPS hygiene
+    # Track which accelerators we can lean on.
     use_cuda = torch.cuda.is_available()
     use_mps = hasattr(torch.backends, "mps") and torch.backends.mps.is_available()
 
-    # Fewer workers prevents spawn stalls on macOS
-    eval_mode = os.getenv("EVAL_MODE", "epoch")  # "epoch", "steps", or "no"
+    # "epoch"|"steps"|"no" (or "0") per transformers semantics.
+    eval_mode = os.getenv("EVAL_MODE", "epoch")
     load_best = eval_mode in {"epoch", "steps"}
 
     base_args = dict(
@@ -176,7 +176,7 @@ def main():
         seed=42,
         no_cuda=not use_cuda and not use_mps,
         save_total_limit=1,
-        # pass both names; your installed transformers will keep the right one
+        # transformers renamed this arg across versions; pass both for safety.
         evaluation_strategy=eval_mode,
         eval_strategy=eval_mode,
         save_strategy=eval_mode if eval_mode != "no" else "no",
@@ -223,7 +223,7 @@ def main():
         class_weights=class_weights,
     )
 
-    # MPS: single-thread feels snappier / less thrashy on laptops
+    # Apple MPS often prefers fewer intraop threads.
     try:
         torch.set_num_threads(int(os.getenv("TORCH_NUM_THREADS", "2")))
     except Exception:
@@ -231,7 +231,7 @@ def main():
 
     trainer.train()
 
-    # Merge LoRA adapters so serving is PEFT-free
+    # Merge LoRA adapters into the base weights for deployment.
     merged = peft_model.merge_and_unload()
     merged.config.id2label = ID2LABEL
     merged.config.label2id = LABEL2ID

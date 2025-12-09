@@ -30,7 +30,7 @@ async function fetchClustered({ query, k = 30, nsfw_ok = false, only_stanceable 
   return payload;
 }
 
-// --- helpers -------------------------------------------------
+// Helpers -----------------------------------------------------------
 const stanceOrder = ["favor", "against", "none"];
 const stanceLabel = { favor: "Supporting", against: "Opposing", none: "Neutral" };
 const stanceColorClass = { favor: "favor", against: "against", none: "none" };
@@ -53,14 +53,14 @@ function partitionBySource(items, src) {
 
 function sortItems(items, sortBy) {
   if (sortBy === "recent") {
-    // if timestamp is present, sort desc; else no-op
+    // Sort newest first when timestamps exist; fall back to stable ordering.
     return [...items].sort((a, b) => {
       const ta = a.timestamp ? Date.parse(a.timestamp) : 0;
       const tb = b.timestamp ? Date.parse(b.timestamp) : 0;
       return tb - ta;
     });
   }
-  // default: confidence (or score fallback)
+  // Default: sort by stance confidence (or score fallback).
   return [...items].sort((a, b) => (b.conf ?? 0) - (a.conf ?? 0));
 }
 
@@ -69,7 +69,7 @@ function Chip({ children }) {
 }
 
 function Metric({ label, value, hint, dist }) {
-  // dist: {favor,against,none} fractions 0..1
+  // dist is a {favor,against,none} fraction map.
   const f = Math.max(0, Math.min(1, dist?.favor || 0));
   const a = Math.max(0, Math.min(1, dist?.against || 0));
   const n = Math.max(0, Math.min(1, dist?.none || 0));
@@ -94,6 +94,7 @@ function ResultCard({ item, stance, saved = false, onToggleSave }) {
   const author = item.author || item.user || item.username || (item.source ? `${item.source} contributor` : "Community member");
   const avatarLabel = author ? author.toString().trim().slice(0, 1).toUpperCase() : "D";
   const confidence = typeof item.conf === "number" ? item.conf.toFixed(2) : null;
+  const stanceSource = item.stance_source || null;
   const sourceLabel = String(item.source || "dataset").replace(/^[a-z]/, (c) => c.toUpperCase());
 
   return (
@@ -111,6 +112,9 @@ function ResultCard({ item, stance, saved = false, onToggleSave }) {
         </div>
         <div className="card-header-right">
           {confidence && <span className="confidence">Conf {confidence}</span>}
+          {!confidence && stanceSource === "gold" && (
+            <span className="confidence">Curated stance</span>
+          )}
           {item.url && (
             <a className="ext" href={item.url} target="_blank" rel="noreferrer">Open ↗</a>
           )}
@@ -148,19 +152,19 @@ function ResultCard({ item, stance, saved = false, onToggleSave }) {
 }
 
 
-// --- main app -----------------------------------------------
+// Main component ---------------------------------------------------
 export default function App() {
   const [query, setQuery] = useState("");
   const [nsfw, setNsfw] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [clusters, setClusters] = useState([]); // [{stance, items:[...]}, ...]
-  const [mode, setMode] = useState("grid"); // grid | compare
-  const [selectedSource, setSelectedSource] = useState("all"); // all | reddit | semeval
+  const [mode, setMode] = useState("grid"); // "grid" or "compare"
+  const [selectedSource, setSelectedSource] = useState("all"); // "all" | "reddit" | "semeval"
   const [onlyStanceable, setOnlyStanceable] = useState(false);
-  const [sortBy, setSortBy] = useState("confidence"); // confidence | recent
+  const [sortBy, setSortBy] = useState("confidence"); // "confidence" | "recent"
   const [showAdvanced, setShowAdvanced] = useState(false);
-  const [density, setDensity] = useState("cozy"); // cozy | compact
+  const [density, setDensity] = useState("cozy"); // "cozy" | "compact"
   const [savedItems, setSavedItems] = useState([]);
   const qref = useRef(null);
 
@@ -194,7 +198,10 @@ export default function App() {
           .filter((c) => stanceOrder.includes(c.stance))
           .map((c) => ({
             ...c,
-            items: c.items || [],
+            items: (c.items || []).map((item) => ({
+              ...item,
+              conf: typeof item.stance_confidence === "number" ? item.stance_confidence : null,
+            })),
           }))
       );
     } catch (e) {
@@ -333,11 +340,17 @@ export default function App() {
           <div className="advanced-panel card">
             <label className="switch">
               <input type="checkbox" checked={nsfw} onChange={(e) => setNsfw(e.target.checked)} />
-              Show NSFW / toxic
+              <div className="switch-text">
+                <span className="switch-title">Include sensitive posts</span>
+                <span className="switch-hint">NSFW or toxic language</span>
+              </div>
             </label>
             <label className="switch">
               <input type="checkbox" checked={onlyStanceable} onChange={(e) => setOnlyStanceable(e.target.checked)} />
-              Require stance flag
+              <div className="switch-text">
+                <span className="switch-title">Only show posts that pick a side</span>
+                <span className="switch-hint">Uses AI plus curated labels</span>
+              </div>
             </label>
           </div>
         )}

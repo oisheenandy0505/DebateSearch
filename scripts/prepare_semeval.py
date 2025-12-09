@@ -22,7 +22,7 @@ RAW  = ROOT / "data" / "raw" / "semeval"
 PRO  = ROOT / "data" / "processed"
 PRO.mkdir(parents=True, exist_ok=True)
 
-# optional fast JSON
+# Optional fast JSON ------------------------------------------------
 try:
     import orjson as _json
     dumps = lambda o: _json.dumps(o).decode("utf-8")
@@ -30,14 +30,14 @@ except Exception:
     import json as _json
     dumps = lambda o: _json.dumps(o, ensure_ascii=False)
 
-# cues
+# Cue lexicon mirrors the Reddit cleaner; fall back to empty weights.
 CUE_PATH = ROOT / "models" / "stance_cues.json"
 try:
     CUES = _json.loads(CUE_PATH.read_bytes())
 except Exception:
     CUES = {"favor": {}, "against": {}}
 
-# stopwords
+# Ensure stopwords exist locally for nltk.
 def ensure_nltk_stopwords():
     try:
         from nltk.corpus import stopwords  # noqa
@@ -49,14 +49,14 @@ ensure_nltk_stopwords()
 from nltk.corpus import stopwords  # noqa
 STOP = set(stopwords.words("english"))
 
-# quality gate
+# Shared quality gate keeps thresholds aligned with the backend.
 try:
     from backend.utils.quality import quality_gate
 except Exception:
     print("ERROR: backend/utils/quality.py not found or import failed.", file=sys.stderr)
     raise
 
-# PII regexes (same as reddit)
+# PII regexes (mirrors prepare_reddit).
 RE_EMAIL   = re.compile(r"\b[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[A-Za-z]{2,}\b")
 RE_PHONE   = re.compile(r"\b(?:\+?\d{1,3}[-.\s]?)?(?:\(?\d{3}\)?[-.\s]?){2}\d{4}\b")
 RE_URL     = re.compile(r"(https?://\S+|\bwww\.\S+)")
@@ -186,7 +186,7 @@ def main():
         print("No usable SemEval rows parsed.", file=sys.stderr)
         sys.exit(2)
 
-    # Clean & score (lenient thresholds)
+    # Clean & score (lenient thresholds keep most tweets).
     cleaned = []
     kept = dropped = dups = 0
     for r in rows:

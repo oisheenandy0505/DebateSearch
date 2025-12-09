@@ -14,17 +14,17 @@ from pathlib import Path
 from datasets import load_dataset
 from tqdm import tqdm
 
-ROOT = Path(__file__).resolve().parents[1]         # DebateSearch/
-DATA_DIR = ROOT / "data"                           # DebateSearch/data/
+ROOT = Path(__file__).resolve().parents[1]
+DATA_DIR = ROOT / "data"
 OUT_PATH = DATA_DIR / "processed" / "reddit_clean.jsonl"
 
-# How many *kept* docs you want
+# Desired number of accepted comments.
 TARGET_DOCS = 1_000_000
 
-# Hard cap on how many rows we even look at (saves your laptop)
+# Stop streaming after this many rows even if target not met.
 MAX_STREAM_ROWS = 20_000_000
 
-# Debate-ish subreddits only (very strict)
+# Only keep subreddits that are debate-oriented.
 DEBATE_SUBS = {
     "politics",
     "worldnews",
@@ -96,11 +96,11 @@ def is_junk_body(text: str) -> bool:
     if num_letters / max(len(body), 1) < 0.4:
         return True
 
-    # Stupidly long (API abuse / copy-paste walls)
+    # Extremely long copy/paste walls
     if len(body) > 3000:
         return True
 
-    # Very heavy quoting: starts with ">" and not much original content
+    # Mostly quotes without new content
     if body.lstrip().startswith(">") and len(body) < 200:
         return True
 
@@ -121,10 +121,10 @@ def compute_quality_score(body: str, score: int | float | None) -> float:
     length = len(body)
     base = 0.2
 
-    # length_score: 0 at 0 chars → 1 at 400+ chars
+    # Normalize length into 0..1 so long comments win.
     length_score = min(length / 400.0, 1.0)
 
-    # reddit score (clip to [0, 50]) → 0–1
+    # Convert Reddit score to 0..1
     score = score or 0
     try:
         score = float(score)
@@ -133,7 +133,7 @@ def compute_quality_score(body: str, score: int | float | None) -> float:
     score = max(score, 0.0)
     score_norm = min(score, 50.0) / 50.0
 
-    # penalties
+    # Short/link-heavy comments get penalized.
     short_penalty = 0.0
     if length < 120:
         short_penalty = 0.25
@@ -174,17 +174,17 @@ def main():
             body = ex.get("body") or ""
             subreddit = (ex.get("subreddit") or "").lower()
 
-            # subreddit filter
+            # Only keep debate-heavy communities.
             if subreddit not in DEBATE_SUBS:
                 pbar.update(1)
                 continue
 
-            # crazy-strict junk filter
+            # Weed out low-effort content.
             if is_junk_body(body):
                 pbar.update(1)
                 continue
 
-            # score filter
+            # Require some engagement signal.
             score = ex.get("score") or 0
             try:
                 score_f = float(score)
@@ -194,7 +194,7 @@ def main():
                 pbar.update(1)
                 continue
 
-            # finalize + quality score
+            # Finalize + compute heuristic quality.
             q_score = compute_quality_score(body, score_f)
 
             doc = {

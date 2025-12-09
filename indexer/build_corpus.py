@@ -16,8 +16,8 @@ Each record has:
 from pathlib import Path
 import json
 
-ROOT = Path(__file__).resolve().parents[1]       # DebateSearch/
-DATA_DIR = ROOT / "data"                         # DebateSearch/data/
+ROOT = Path(__file__).resolve().parents[1]
+DATA_DIR = ROOT / "data"
 
 SEM_PATH = DATA_DIR / "processed" / "semeval_clean.jsonl"
 RED_PATH = DATA_DIR / "processed" / "reddit_clean.jsonl"
@@ -51,7 +51,7 @@ def main():
     print(f"Loaded {len(red_rows):,} Reddit rows")
 
     with OUT_PATH.open("w", encoding="utf-8") as fout:
-        # SemEval first (labeled)
+        # Emit labeled SemEval rows first so gold labels appear up top.
         for i, ex in enumerate(sem_rows, start=1):
             body = ex.get("body") or ex.get("tweet") or ""
             doc = {
@@ -64,11 +64,11 @@ def main():
                 "score": None,
                 "target": ex.get("target"),
                 "stance_gold": ex.get("stance_gold"),
-                "quality_score": 1.0,  # labeled, curated data
+                "quality_score": 1.0,
             }
             fout.write(json.dumps(doc, ensure_ascii=False) + "\n")
 
-        # Reddit (already cleaned + quality_score)
+        # Append Reddit comments that already carry a quality score.
         for ex in red_rows:
             doc = {
                 "id": ex.get("id"),
@@ -78,8 +78,8 @@ def main():
                 "subreddit": ex.get("subreddit"),
                 "created_utc": ex.get("created_utc"),
                 "score": ex.get("score"),
-                "target": ex.get("target"),          # None
-                "stance_gold": ex.get("stance_gold"),# None
+                "target": ex.get("target"),
+                "stance_gold": ex.get("stance_gold"),
                 "quality_score": ex.get("quality_score", 0.5),
             }
             fout.write(json.dumps(doc, ensure_ascii=False) + "\n")

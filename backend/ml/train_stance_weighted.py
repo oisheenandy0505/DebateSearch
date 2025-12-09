@@ -48,14 +48,13 @@ class WeightedTrainer(Trainer):
     def __init__(self, class_weights=None, **kwargs):
         super().__init__(**kwargs)
         self.class_weights = class_weights
-        self.loss_fct = nn.CrossEntropyLoss(weight=None)  # set in first call when device known
+        self.loss_fct = nn.CrossEntropyLoss(weight=None)  # lazily moves weights to device
 
     def compute_loss(self, model, inputs, return_outputs=False, **kwargs):
         labels = inputs.get("labels")
         outputs = model(**{k:v for k,v in inputs.items() if k!="labels"})
         logits = outputs.get("logits")
 
-        # lazily move weights to the model's device
         if self.class_weights is not None and self.loss_fct.weight is None:
             self.loss_fct = nn.CrossEntropyLoss(weight=self.class_weights.to(logits.device))
 
@@ -79,7 +78,7 @@ def main():
     ds_tr_raw = make_ds(train_path)
     ds_de_raw = make_ds(dev_path)
 
-    # class weights (inverse freq, lightly smoothed)
+    # Inverse-frequency weights keep the macro F1 aligned with imbalanced labels.
     cnt = Counter(ds_tr_raw["labels"])
     total = sum(cnt.values())
     weights = []
@@ -102,7 +101,7 @@ def main():
         learning_rate=3e-5,
         per_device_train_batch_size=12,
         per_device_eval_batch_size=24,
-        gradient_accumulation_steps=3,  # effective 36
+        gradient_accumulation_steps=3,  # ≈36 global batch
         num_train_epochs=3,
         weight_decay=0.01,
         logging_steps=25,

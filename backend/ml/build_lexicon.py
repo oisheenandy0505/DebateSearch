@@ -29,7 +29,7 @@ STOP = {
     "our","their","with","as","by","from","about","not","no","do","does","did",
 }
 LABELS = ("favor","against","none")
-USE_LABELS = ("favor","against")  # cues only for polar classes
+USE_LABELS = ("favor","against")  # only polar classes contribute cues
 
 def tokens(s: str):
     for t in TOKEN_RE.findall(s.lower()):
@@ -37,7 +37,7 @@ def tokens(s: str):
             yield t
 
 def ngrams(words, n=2):
-    # unigrams + bigrams
+    # Emit unigrams and bigrams so we capture short phrases.
     ws = list(words)
     for w in ws: yield w
     for i in range(len(ws)-1):
@@ -55,7 +55,7 @@ def load_split(name):
     return rows
 
 def chi_square(k11, k12, k21, k22):
-    # classic 2x2 chi2 with Yates continuity correction
+    # Classic 2x2 chi-square with Yates continuity correction.
     N = k11 + k12 + k21 + k22
     if N == 0: return 0.0
     num = N * (abs(k11*k22 - k12*k21) - N/2)**2
@@ -65,10 +65,8 @@ def chi_square(k11, k12, k21, k22):
 
 def build(min_df=10, top_k=400):
     train = load_split("train")
-    # Global counters
-    df_term = collections.Counter()                   # document frequency across all docs
+    df_term = collections.Counter()
     df_label = {lbl: collections.Counter() for lbl in USE_LABELS}
-    # Per-topic counters
     per_topic_df = collections.defaultdict(lambda: collections.Counter())
     per_topic_df_label = collections.defaultdict(lambda: {lbl: collections.Counter() for lbl in USE_LABELS})
 
@@ -100,28 +98,28 @@ def build(min_df=10, top_k=400):
                 if label in USE_LABELS:
                     per_topic_df_label[topic][label][t] += 1
 
-    # Compute chi2 globally
+    # Score cues globally.
     global_cues = {lbl:{} for lbl in USE_LABELS}
     for t, df in df_term.items():
         if df < min_df: continue
         for lbl in USE_LABELS:
-            k11 = df_label[lbl][t]                         # term & label
-            k12 = df_term[t] - k11                         # term & not label
-            k21 = by_label_docs[lbl] - k11                # label & not term
-            k22 = (all_docs - by_label_docs[lbl]) - k12   # neither
+            k11 = df_label[lbl][t]
+            k12 = df_term[t] - k11
+            k21 = by_label_docs[lbl] - k11
+            k22 = (all_docs - by_label_docs[lbl]) - k12
             score = chi_square(k11,k12,k21,k22)
             if score > 0:
                 global_cues[lbl][t] = score
 
-    # Per-topic chi2
+    # Repeat scoring per topic to capture topic-specific cues.
     per_topic_cues = {}
     for topic, tdf in per_topic_df.items():
         topic_total = per_topic_docs[topic]
-        if topic_total < 25:   # tiny topics = noisy
+        if topic_total < 25:   # skip tiny/noisy topics
             continue
         cues = {lbl:{} for lbl in USE_LABELS}
         for t, df in tdf.items():
-            if df < max(5, min_df//2):  # slightly looser inside topic
+            if df < max(5, min_df//2):
                 continue
             for lbl in USE_LABELS:
                 k11 = per_topic_df_label[topic][lbl][t]
@@ -131,13 +129,12 @@ def build(min_df=10, top_k=400):
                 score = chi_square(k11,k12,k21,k22)
                 if score > 0:
                     cues[lbl][t] = score
-        # keep top_k per label
         per_topic_cues[topic] = {
             "favor": dict(sorted(cues["favor"].items(), key=lambda x: -x[1])[:top_k]),
             "against": dict(sorted(cues["against"].items(), key=lambda x: -x[1])[:top_k]),
         }
 
-    # trim global too
+    # Trim global cues to match the cap as well.
     global_cues = {
         "favor":  dict(sorted(global_cues["favor"].items(),   key=lambda x: -x[1])[:top_k]),
         "against":dict(sorted(global_cues["against"].items(), key=lambda x: -x[1])[:top_k]),

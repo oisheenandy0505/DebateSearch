@@ -10,8 +10,8 @@ from typing import Iterable
 
 from opensearchpy import OpenSearch, helpers
 
-ROOT = Path(__file__).resolve().parents[1]   # DebateSearch/
-DATA_DIR = ROOT / "data"                     # DebateSearch/data/
+ROOT = Path(__file__).resolve().parents[1]
+DATA_DIR = ROOT / "data"
 CORPUS_PATH = DATA_DIR / "processed" / "corpus.jsonl"
 
 INDEX_NAME = "debate_docs"

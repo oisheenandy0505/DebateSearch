@@ -1,19 +1,5 @@
 #!/usr/bin/env python3
-"""
-FastAPI backend for DebateSearch.
-
-Endpoints
----------
-GET  /health
-GET  /search_clustered
-POST /search_clustered
-
-It talks to:
-  - OpenSearch index "debate_docs" for retrieval
-  - DistilBERT stance model in ../models/stance_distilbert for clustering
-and:
-  - redacts obvious PII before returning snippets.
-"""
+"""FastAPI service that queries OpenSearch, runs stance classification, and returns clusters."""
 
 import os
 import json
@@ -31,10 +17,6 @@ import torch
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 
 from backend.ml.pii_utils import redact_text
-
-# -------------------------------------------------------------------
-# Env & constants
-# -------------------------------------------------------------------
 
 load_dotenv()
 
@@ -57,12 +39,8 @@ MAX_K = 100
 BATCH_SIZE = 16
 MAX_SEQ_LEN = 256
 
-# crude NSFW heuristic to downrank or filter
+# Drop obviously explicit snippets before clustering.
 NSFW_RE = re.compile(r"\b(nsfw|porn|sex|xxx|onlyfans)\b", re.IGNORECASE)
-
-# -------------------------------------------------------------------
-# Global state: OpenSearch client + stance model
-# -------------------------------------------------------------------
 
 os_client: Optional[OpenSearch] = None
 stance_tokenizer: Optional[AutoTokenizer] = None
@@ -97,7 +75,7 @@ def load_stance_model():
     stance_model = AutoModelForSequenceClassification.from_pretrained(str(MODEL_DIR))
     stance_model.eval()
 
-    # device selection
+    # Run inference on the fastest available accelerator.
     if torch.backends.mps.is_available():
         device = "mps"
     elif torch.cuda.is_available():
@@ -107,23 +85,19 @@ def load_stance_model():
     stance_model.to(device)
     stance_model.device_name = device  # type: ignore[attr-defined]
 
-    # read label mapping if present
+    # Support custom label ordering if metadata exists.
     meta_path = MODEL_DIR / "label_meta.json"
     if meta_path.exists():
         try:
             with meta_path.open() as f:
                 meta = json.load(f)
             raw = meta.get("id2label") or {}
-            # keys may be strings
+            # Keys can arrive as strings, so normalize to ints.
             ID2LABEL = {int(k): v for k, v in raw.items()}
         except Exception as e:
             print(f"[WARN] could not load label_meta.json: {e}")
     print(f"[OK] stance labels: {ID2LABEL}")
 
-
-# -------------------------------------------------------------------
-# Pydantic models
-# -------------------------------------------------------------------
 
 class SearchReq(BaseModel):
     query: str
@@ -144,6 +118,7 @@ class ClusterItem(BaseModel):
     quality_score: Optional[float] = None
     stance_label: Optional[str] = None
     stance_confidence: Optional[float] = None
+    stance_source: Optional[str] = None  # "model" | "gold" | None
 
 
 class StanceCluster(BaseModel):
@@ -156,10 +131,6 @@ class ClusteredResponse(BaseModel):
     clusters: List[StanceCluster]
     meta: Dict[str, Any]
 
-
-# -------------------------------------------------------------------
-# FastAPI app
-# -------------------------------------------------------------------
 
 app = FastAPI(title="DebateSearch backend")
 
@@ -174,7 +145,7 @@ app.add_middleware(
 
 @app.on_event("startup")
 def _startup():
-    # warm up connections
+    # Warm connections on boot so the first user request is fast.
     client = get_os_client()
     try:
         client.indices.exists(INDEX_NAME)
@@ -185,12 +156,38 @@ def _startup():
     load_stance_model()
 
 
-# -------------------------------------------------------------------
-# Helpers
-# -------------------------------------------------------------------
-
 def _is_nsfw(text: str) -> bool:
     return bool(NSFW_RE.search(text or ""))
+
+
+def _normalize_stance(value: Optional[str]) -> Optional[str]:
+    if value is None:
+        return None
+    cleaned = value.strip().lower()
+    if not cleaned:
+        return None
+    if cleaned in {"favor", "support", "pro", "for", "supporting"}:
+        return "favor"
+    if cleaned in {"against", "oppose", "con", "anti", "opposing"}:
+        return "against"
+    if cleaned in {"none", "neutral", "unknown"}:
+        return "none"
+    return None
+
+
+def _resolve_stance(doc: Dict[str, Any]) -> Dict[str, Any]:
+    """Return normalized stance label + source marker."""
+    primary = _normalize_stance(doc.get("stance_label"))
+    if primary and primary != "none":
+        return {"stance": primary, "source": "model"}
+
+    fallback = _normalize_stance(doc.get("stance_gold"))
+    if fallback and fallback != "none":
+        return {"stance": fallback, "source": "gold"}
+
+    # either explicitly neutral or we truly have no signal
+    stance = primary or fallback or "none"
+    return {"stance": stance, "source": None}
 
 
 def _search_raw(query: str, k: int, min_quality: float, nsfw_ok: bool) -> List[Dict[str, Any]]:
@@ -263,15 +260,7 @@ def _search_raw(query: str, k: int, min_quality: float, nsfw_ok: bool) -> List[D
 
 @torch.inference_mode()
 def _classify_stance(query: str, docs: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
-    """
-    Run DistilBERT on (query, body) pairs and attach:
-      - stance_label in {"favor","against","none"}
-      - stance_confidence in [0,1]
-
-    This version is slightly more *aggressive* at assigning favor/against:
-      - lower confidence + margin thresholds,
-      - raw "neutral" predictions still go to "none".
-    """
+    """Label each snippet with favor/against/none plus a confidence score."""
     if not docs or stance_model is None or stance_tokenizer is None:
         return docs
 
@@ -280,7 +269,6 @@ def _classify_stance(query: str, docs: List[Dict[str, Any]]) -> List[Dict[str, A
     texts = [d.get("body", "") for d in docs]
     results: List[Dict[str, Any]] = []
 
-    # more permissive thresholds than before
     HIGH_CONF = 0.55          # was 0.7
     NEUTRAL_MARGIN = 0.10     # was 0.2
 
@@ -304,20 +292,16 @@ def _classify_stance(query: str, docs: List[Dict[str, Any]]) -> List[Dict[str, A
             top_idx = int(prob_vec.argmax())
             top_prob = float(prob_vec[top_idx])
 
-            # second-best prob
             sorted_probs = sorted(prob_vec, reverse=True)
             second_prob = float(sorted_probs[1]) if len(sorted_probs) > 1 else 0.0
 
             raw_label = ID2LABEL.get(top_idx, "neutral").lower()
 
-            # default bucket
             stance = "none"
 
-            # FORCE: if model explicitly calls it "neutral", treat as none
             if raw_label == "neutral":
                 stance = "none"
             else:
-                # model prefers support/oppose
                 if top_prob >= HIGH_CONF and (top_prob - second_prob) >= NEUTRAL_MARGIN:
                     if raw_label == "support":
                         stance = "favor"
@@ -326,8 +310,6 @@ def _classify_stance(query: str, docs: List[Dict[str, Any]]) -> List[Dict[str, A
                     else:
                         stance = "none"
                 else:
-                    # borderline: still give it a side if it's clearly not neutral
-                    # but margin is small. This pushes more into favor/against.
                     if top_prob >= 0.5 and raw_label in {"support", "oppose"}:
                         stance = "favor" if raw_label == "support" else "against"
                     else:
@@ -350,11 +332,12 @@ def _cluster_results(query: str, docs: List[Dict[str, Any]], only_stanceable: bo
     }
 
     for d in docs:
-        stance = d.get("stance_label") or "none"
+        resolved = _resolve_stance(d)
+        stance = resolved["stance"]
         if only_stanceable and stance == "none":
             continue
 
-        # IMPORTANT: redact_text returns (clean_text, had_pii_flag) → unpack it
+        # redact_text returns (clean_text, had_pii_flag); ignore flag for now.
         clean_body, _had_pii = redact_text(d.get("body", "") or "")
 
         item = ClusterItem(
@@ -367,7 +350,8 @@ def _cluster_results(query: str, docs: List[Dict[str, Any]], only_stanceable: bo
             score=d.get("score"),
             quality_score=d.get("quality_score"),
             stance_label=stance,
-            stance_confidence=d.get("stance_confidence"),
+            stance_confidence=d.get("stance_confidence") if resolved["source"] == "model" else None,
+            stance_source=resolved["source"],
         )
         clusters[stance].append(item)
 
@@ -399,10 +383,6 @@ def _search_clustered_core(
 
     return _cluster_results(query, docs, only_stanceable)
 
-
-# -------------------------------------------------------------------
-# Routes
-# -------------------------------------------------------------------
 
 @app.get("/health")
 def health():
