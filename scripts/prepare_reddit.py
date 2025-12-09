@@ -8,9 +8,8 @@ Prepare Reddit JSONL -> data/processed/reddit_clean.jsonl
 - Uses models/stance_cues.json if present (falls back to empty)
 - Writes compact JSONL with normalized fields
 
-Usage examples:
-  python -m scripts.prepare_reddit --verbose --no-dedupe --limit 10000
-  python -m scripts.prepare_reddit --glob "data/raw/kaggle/reddit*.jsonl" --verbose
+- Example:
+    python -m scripts.prepare_reddit --glob "data/raw/kaggle/reddit*.jsonl" --verbose
 """
 
 import re

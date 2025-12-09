@@ -349,7 +349,7 @@ export default function App() {
               <input type="checkbox" checked={onlyStanceable} onChange={(e) => setOnlyStanceable(e.target.checked)} />
               <div className="switch-text">
                 <span className="switch-title">Only show posts that pick a side</span>
-                <span className="switch-hint">Uses AI plus curated labels</span>
+                <span className="switch-hint">Relies on stance labels or curated tags</span>
               </div>
             </label>
           </div>

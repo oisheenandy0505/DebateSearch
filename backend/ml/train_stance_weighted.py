@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+"""DistilBERT trainer with inverse-frequency loss weighting to favor macro-F1."""
 import os, json, random, inspect
 from pathlib import Path
 import numpy as np

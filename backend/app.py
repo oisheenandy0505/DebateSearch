@@ -24,8 +24,9 @@ BACKEND_ROOT = Path(__file__).resolve().parent
 PROJECT_ROOT = BACKEND_ROOT.parent
 MODEL_DIR = PROJECT_ROOT / "models" / "stance_distilbert"
 
-print(f"[DEBUG] PROJECT_ROOT = {PROJECT_ROOT}")
-print(f"[DEBUG] MODEL_DIR = {MODEL_DIR}")
+if os.getenv("BACKEND_DEBUG_LOG_PATHS", "0") == "1":
+    print(f"[DEBUG] PROJECT_ROOT = {PROJECT_ROOT}")
+    print(f"[DEBUG] MODEL_DIR = {MODEL_DIR}")
 
 OS_HOST = os.getenv("OS_HOST", "localhost")
 OS_PORT = int(os.getenv("OS_PORT", "9200"))
@@ -191,6 +192,7 @@ def _resolve_stance(doc: Dict[str, Any]) -> Dict[str, Any]:
 
 
 def _search_raw(query: str, k: int, min_quality: float, nsfw_ok: bool) -> List[Dict[str, Any]]:
+    """Retrieve top-k hits from OpenSearch with a quality-score boost and optional NSFW filtering."""
     client = get_os_client()
     size = min(max(k, 1), MAX_K)
 

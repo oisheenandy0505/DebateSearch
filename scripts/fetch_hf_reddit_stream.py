@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """
 Stream Reddit comments from Hugging Face (fddemarco/pushshift-reddit-comments),
-apply VERY strict quality filters, and write a ~1M-document JSONL file.
+apply strict quality filters, and write ~1M JSONL records aligned with the rest
+of the pipeline. Example:
 
-Output schema matches the rest of the pipeline:
-  id, body, subreddit, created_utc, score, source, target, stance_gold, quality_score
+    python -m scripts.fetch_hf_reddit_stream
 """
 
 import json

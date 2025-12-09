@@ -1,21 +1,5 @@
 #!/usr/bin/env python3
-"""
-LoRA trainer — weighted loss + speed knobs for Mac M2.
-
-Matches train_stance_weighted functionality (class weighting, (query,text),
-macro-F1) but trains adapters only and can run in 'fast' modes.
-
-ENV KNOBS (all optional):
-  MAX_LEN=128          # token length (matches API via STANCE_MAX_LEN_INFER)
-  EPOCHS=2             # small for dev; 3 for full
-  MAX_STEPS=0          # e.g., 120 for a smoke run; 0 = unlimited
-  SUBSAMPLE_PER_CLASS=0# e.g., 1000 keeps 1k rows per class; 0 = no cap
-  LORA_R=8 LORA_ALPHA=16 LORA_DROPOUT=0.05
-  LR=2e-4              # higher OK for adapters
-  BATCH_TRAIN=12 BATCH_EVAL=24
-  GRAD_ACCUM=1         # 1 on M2 is usually fastest
-  PATIENCE=2           # early stopping patience (epochs)
-"""
+"""LoRA fine-tuning path with class weighting and env-configurable speed knobs."""
 
 import os, json, random, inspect
 from pathlib import Path

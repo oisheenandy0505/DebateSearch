@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Prepare SemEval-2016 Task 6 (stance) -> data/processed/semeval_{train,dev,test}.jsonl
+Prepare SemEval-2016 Task 6 (stance) -> data/processed/semeval_{train,dev,test}.jsonl.
 
 Accepts any tab-separated file in data/raw/semeval/ matching common names:
   trainingdata-*.txt/.tsv, trialdata-*.txt/.tsv, testdata-*.txt/.tsv, etc.
@@ -8,6 +8,9 @@ Accepts any tab-separated file in data/raw/semeval/ matching common names:
 - PII masking
 - Quality gate (lenient; still drops near-dupes & very low signal)
 - Stratified split if no official dev/test provided
+
+Example:
+    python -m scripts.prepare_semeval --default
 """
 
 import csv

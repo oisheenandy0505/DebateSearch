@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+"""Full-finetune DistilBERT on SemEval stance data (baseline trainer)."""
 import os, json, random, inspect
 from pathlib import Path
 
