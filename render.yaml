@@ -4,7 +4,7 @@ services:
     env: python
     plan: free
     buildCommand: pip install --upgrade pip && pip install -r backend/requirements.txt
-    startCommand: cd backend && uvicorn app:app --host 0.0.0.0 --port $PORT
+    startCommand: uvicorn backend.app:app --host 0.0.0.0 --port $PORT
     envVars:
       - key: OS_HOST
         value: debate-opensearch
@@ -29,7 +29,7 @@ services:
       - key: MASK_PII_AT_SERVE
         value: "true"
 
-  - type: job
+  - type: worker
     name: debate-indexer
     env: python
     plan: free
