@@ -47,13 +47,3 @@ services:
         value: admin
       - key: OS_INDEX
         value: debate_docs
-
-  - type: static
-    name: debate-frontend
-    plan: free
-    rootDir: frontend
-    buildCommand: npm install && npm run build
-    publishPath: dist
-    envVars:
-      - key: VITE_API_URL
-        value: https://debate-backend.onrender.com
