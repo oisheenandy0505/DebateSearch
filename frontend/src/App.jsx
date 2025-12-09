@@ -1,24 +1,81 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import "./App.css";
 
-const API = import.meta.env.VITE_API_URL || "http://127.0.0.1:8000";
+const DEFAULT_API = (() => {
+  if (typeof window === "undefined") return "http://127.0.0.1:8000";
+  const { protocol, hostname, port } = window.location;
+  if (!port) return `${protocol}//${hostname}`;
+  if (port === "5173") return `${protocol}//${hostname}:8000`;
+  return `${protocol}//${hostname}:${port}`;
+})();
 
-function fetchClustered({ query, k = 30, nsfw_ok = false }) {
-  return fetch(`${API}/search_clustered`, {
+const API = import.meta.env.VITE_API_URL || DEFAULT_API;
+
+async function fetchClustered({ query, k = 30, nsfw_ok = false, only_stanceable = false }) {
+  const res = await fetch(`${API}/search_clustered`, {
     method: "POST",
     headers: { "content-type": "application/json" },
-    body: JSON.stringify({ query, k, nsfw_ok, min_quality: 0.3, only_stanceable: true }),
-  }).then((r) => r.json());
+    body: JSON.stringify({ query, k, nsfw_ok, min_quality: 0.3, only_stanceable }),
+  });
+  let payload = null;
+  try {
+    payload = await res.json();
+  } catch {
+    payload = null;
+  }
+  if (!res.ok) {
+    const detail = payload?.detail || payload?.message;
+    throw new Error(detail || `Search failed (${res.status})`);
+  }
+  return payload;
 }
 
 // --- helpers -------------------------------------------------
 const stanceOrder = ["favor", "against", "none"];
 const stanceLabel = { favor: "Supporting", against: "Opposing", none: "Neutral" };
 const stanceColorClass = { favor: "favor", against: "against", none: "none" };
+function normalizeSource(value) {
+  const normalized = (value || "").toLowerCase();
+  if (!normalized) return "";
+  if (["twitter", "semeval", "twitter/semeval"].includes(normalized)) return "semeval";
+  return normalized;
+}
+const sourceOptions = [
+  { value: "all", label: "All" },
+  { value: "reddit", label: "Reddit" },
+  { value: "semeval", label: "Twitter/SemEval" },
+];
+const STOPWORDS = new Set([
+  "the", "and", "for", "that", "with", "this", "from", "have", "was", "will", "your",
+  "about", "they", "their", "what", "when", "where", "which", "would", "there", "could",
+  "should", "into", "because", "been", "were", "cant", "can't", "dont", "don't", "doesnt",
+  "doesn't", "im", "i'm", "its", "it's", "you", "are", "but", "not", "all", "any", "our",
+  "his", "her", "she", "him", "them", "who", "why", "how", "too", "very", "much", "than",
+  "just", "like", "also", "really", "more", "less", "even", "some", "most"
+]);
+
+function extractKeywords(items, limit = 3) {
+  const counts = new Map();
+  for (const item of items) {
+    const text = (item.text || "").toLowerCase();
+    const tokens = text
+      .replace(/[^a-z0-9\s]/g, " ")
+      .split(/\s+/)
+      .filter((token) => token.length > 3 && !STOPWORDS.has(token));
+    tokens.forEach((token) => {
+      counts.set(token, (counts.get(token) || 0) + 1);
+    });
+  }
+  return [...counts.entries()]
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, limit)
+    .map(([token]) => token);
+}
 
 function partitionBySource(items, src) {
   if (!src || src === "all") return items;
-  return items.filter((x) => (x.source || "").toLowerCase() === src);
+  const needle = normalizeSource(src);
+  return items.filter((x) => normalizeSource(x.source) === needle);
 }
 
 function sortItems(items, sortBy) {
@@ -57,22 +114,34 @@ function Metric({ label, value, hint, dist }) {
   );
 }
 
-function ResultCard({ item, stance }) {
+function ResultCard({ item, stance, saved = false, onToggleSave }) {
   const [expanded, setExpanded] = useState(false);
-  const text = (item.text || "").trim();
-  const isLong = text.length > 280; // tweak threshold if you want
+  const text = (item.text || item.body || "").trim();
+  const isLong = text.length > 140; // two-line teaser before expanding
+  const author = item.author || item.user || item.username || (item.source ? `${item.source} contributor` : "Community member");
+  const avatarLabel = author ? author.toString().trim().slice(0, 1).toUpperCase() : "D";
+  const confidence = typeof item.conf === "number" ? item.conf.toFixed(2) : null;
+  const sourceLabel = String(item.source || "dataset").replace(/^[a-z]/, (c) => c.toUpperCase());
 
   return (
     <div className={`card card-${stanceColorClass[stance]}`}>
       <div className="card-header">
-        <div className="card-badges">
-          <span className={`badge ${stanceColorClass[stance]}`}>{stanceLabel[stance]}</span>
-          {item.source && <span className="badge src">{item.source}</span>}
-          {typeof item.conf === "number" && <span className="badge">conf: {item.conf.toFixed(2)}</span>}
+        <div className="card-header-left">
+          <div className="avatar" aria-hidden>{avatarLabel}</div>
+          <div>
+            <div className="author">{author}</div>
+            <div className="source-row">
+              <span className="source-pill">{sourceLabel}</span>
+              <span className={`badge ${stanceColorClass[stance]}`}>{stanceLabel[stance]}</span>
+            </div>
+          </div>
         </div>
-        {item.url && (
-          <a className="ext" href={item.url} target="_blank" rel="noreferrer">↗</a>
-        )}
+        <div className="card-header-right">
+          {confidence && <span className="confidence">Conf {confidence}</span>}
+          {item.url && (
+            <a className="ext" href={item.url} target="_blank" rel="noreferrer">Open ↗</a>
+          )}
+        </div>
       </div>
 
       <div className={`card-text ${expanded ? "expanded" : "clamped"}`}>
@@ -85,11 +154,21 @@ function ResultCard({ item, stance }) {
       )}
 
       <div className="card-footer">
-        <div className="muted">{item.timestamp ? new Date(item.timestamp).toLocaleString() : "semeval/reddit"}</div>
-        <div className="actions">
-          <button>Discuss</button>
-          <button>Save</button>
+        <div>
+          <div className="muted">{item.timestamp ? new Date(item.timestamp).toLocaleString() : "Semeval / Reddit"}</div>
+          <div className="muted lighter">#{item.id || "debate"}</div>
         </div>
+        {onToggleSave && (
+          <div className="actions">
+            <button
+              type="button"
+              className={`save-btn ${saved ? "saved" : ""}`}
+              onClick={() => onToggleSave(item, stance)}
+            >
+              {saved ? "Saved" : "Save"}
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );
@@ -101,10 +180,15 @@ export default function App() {
   const [query, setQuery] = useState("");
   const [nsfw, setNsfw] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
   const [clusters, setClusters] = useState([]); // [{stance, items:[...]}, ...]
   const [mode, setMode] = useState("grid"); // grid | compare
-  const [selectedSource, setSelectedSource] = useState("all"); // all | reddit | twitter
+  const [selectedSource, setSelectedSource] = useState("all"); // all | reddit | semeval
+  const [onlyStanceable, setOnlyStanceable] = useState(false);
   const [sortBy, setSortBy] = useState("confidence"); // confidence | recent
+  const [showAdvanced, setShowAdvanced] = useState(false);
+  const [density, setDensity] = useState("cozy"); // cozy | compact
+  const [savedItems, setSavedItems] = useState([]);
   const qref = useRef(null);
 
   const counts = useMemo(() => {
@@ -122,11 +206,16 @@ export default function App() {
     };
   }, [counts]);
 
-  async function doSearch() {
-    if (!query.trim()) return;
+  async function doSearch(nextQuery) {
+    const activeQuery = (typeof nextQuery === "string" ? nextQuery : query).trim();
+    if (!activeQuery) return;
+    if (nextQuery) {
+      setQuery(activeQuery);
+    }
     setLoading(true);
+    setError("");
     try {
-      const data = await fetchClustered({ query, k: 30, nsfw_ok: nsfw });
+      const data = await fetchClustered({ query: activeQuery, k: 30, nsfw_ok: nsfw, only_stanceable: onlyStanceable });
       setClusters(
         (data?.clusters || [])
           .filter((c) => stanceOrder.includes(c.stance))
@@ -137,6 +226,7 @@ export default function App() {
       );
     } catch (e) {
       console.error(e);
+      setError(e?.message || "Search failed");
       setClusters([]);
     } finally {
       setLoading(false);
@@ -148,30 +238,60 @@ export default function App() {
     if (qref.current) qref.current.focus();
   }, []);
 
-  const rendered = useMemo(() => {
+  const { rendered, stanceSummaries } = useMemo(() => {
     const filteredSorted = {};
+    const stats = {};
     for (const stance of stanceOrder) {
       const bucket = clusters.find((c) => c.stance === stance);
       const items = bucket?.items || [];
       const f = partitionBySource(items, selectedSource);
-      filteredSorted[stance] = sortItems(f, sortBy);
+      const sorted = sortItems(f, sortBy);
+      filteredSorted[stance] = sorted;
+      const latest = sorted.reduce((latestTs, item) => {
+        if (!item.timestamp) return latestTs;
+        const ts = Date.parse(item.timestamp);
+        if (!latestTs || ts > latestTs) return ts;
+        return latestTs;
+      }, null);
+      stats[stance] = {
+        latest: latest ? new Date(latest).toLocaleDateString() : null,
+        keywords: extractKeywords(sorted, 3),
+      };
     }
-    return filteredSorted;
+    return { rendered: filteredSorted, stanceSummaries: stats };
   }, [clusters, selectedSource, sortBy]);
+  const sortLabel = sortBy === "recent" ? "Most recent" : "Confidence";
+  const totalVisible = useMemo(
+    () => stanceOrder.reduce((sum, stance) => sum + ((rendered[stance] || []).length), 0),
+    [rendered]
+  );
+  const savedIds = useMemo(() => new Set(savedItems.map((it) => it.id)), [savedItems]);
+
+  function handleToggleSave(item, stance) {
+    if (!item?.id) return;
+    setSavedItems((prev) => {
+      const exists = prev.find((entry) => entry.id === item.id);
+      if (exists) {
+        return prev.filter((entry) => entry.id !== item.id);
+      }
+      return [...prev, { ...item, savedStance: stance }];
+    });
+  }
 
   return (
     <div className="app light">
-      <div className="topbar">
+      <header className="app-header">
         <div className="brand">
-          <div className="logo" aria-hidden>🔍</div>
-          <div className="brand-name">Debate Search</div>
+          <div className="logo" aria-hidden>💬</div>
+          <div>
+            <h1>Debate Search</h1>
+            <p>Discover how different voices support or oppose the same topic.</p>
+          </div>
         </div>
-        <div className="grow" />
-      </div>
+      </header>
 
-      <div className="container">
-        {/* Search */}
-        <div className="search-wrap">
+      <main className={`container density-${density}`}>
+        <section className="search-card card">
           <div className="search-box">
             <input
               ref={qref}
@@ -181,77 +301,155 @@ export default function App() {
               onChange={(e) => setQuery(e.target.value)}
               onKeyDown={(e) => e.key === "Enter" && doSearch()}
             />
-            <button className="btn" disabled={loading} onClick={doSearch}>
+            <button className="btn" disabled={loading} onClick={() => doSearch()}>
               {loading ? "Searching…" : "Search"}
             </button>
           </div>
-          <label className="switch">
-            <input type="checkbox" checked={nsfw} onChange={(e) => setNsfw(e.target.checked)} />
-            Show NSFW/toxic
-          </label>
-        </div>
+          <p className="search-hint">Try questions like “carbon tax benefits” or “grad school rankings”.</p>
+          {error && <div className="error" role="alert">{error}</div>}
+        </section>
 
-        {/* Filter bar */}
-        <div className="filters card">
-          <div className="f-left">
+        <section className="controls card">
+          <div className="control-row">
             <label>
-              Source:
+              Source
               <select value={selectedSource} onChange={(e) => setSelectedSource(e.target.value)}>
-                <option value="all">All</option>
-                <option value="reddit">Reddit</option>
-                <option value="twitter">Twitter</option>
+                {sourceOptions.map((opt) => (
+                  <option key={opt.value} value={opt.value}>{opt.label}</option>
+                ))}
               </select>
             </label>
             <label>
-              Sort:
+              Sort
               <select value={sortBy} onChange={(e) => setSortBy(e.target.value)}>
                 <option value="confidence">Confidence</option>
                 <option value="recent">Most Recent</option>
               </select>
             </label>
           </div>
-          <div className="f-right tabs">
-            <button className={`tab ${mode === "grid" ? "active" : ""}`} onClick={() => setMode("grid")}>
-              Grid View
-            </button>
-            <button className={`tab ${mode === "compare" ? "active" : ""}`} onClick={() => setMode("compare")}>
-              Comparison
+          <div className="control-row">
+            <div className="pill-segmented" role="tablist" aria-label="View mode">
+              <button
+                type="button"
+                className={mode === "grid" ? "active" : ""}
+                onClick={() => setMode("grid")}
+              >
+                Grid
+              </button>
+              <button
+                type="button"
+                className={mode === "compare" ? "active" : ""}
+                onClick={() => setMode("compare")}
+              >
+                Compare
+              </button>
+            </div>
+            <div className="pill-segmented density-toggle" role="group" aria-label="Result density">
+              <button
+                type="button"
+                className={density === "cozy" ? "active" : ""}
+                onClick={() => setDensity("cozy")}
+                aria-pressed={density === "cozy"}
+              >
+                Relaxed
+              </button>
+              <button
+                type="button"
+                className={density === "compact" ? "active" : ""}
+                onClick={() => setDensity("compact")}
+                aria-pressed={density === "compact"}
+              >
+                Compact
+              </button>
+            </div>
+            <button
+              type="button"
+              className="command-advanced"
+              onClick={() => setShowAdvanced((v) => !v)}
+            >
+              {showAdvanced ? "Hide advanced" : "Advanced filters"}
             </button>
           </div>
-        </div>
+        </section>
 
-        {/* Dashboard metrics (simple) */}
-        <div className="dashboard card">
-          <h3 className="dash-title">Analytics Dashboard</h3>
-          <div className="metric-row">
-            <Metric label="Total Posts" value={counts.favor + counts.against + counts.none} hint="" dist={dist} />
-            <Metric label="For" value={counts.favor} hint="" dist={{ favor: 1, against: 0, none: 0 }} />
-            <Metric label="Against" value={counts.against} hint="" dist={{ favor: 0, against: 1, none: 0 }} />
-            <Metric label="Neutral" value={counts.none} hint="" dist={{ favor: 0, against: 0, none: 1 }} />
+        {showAdvanced && (
+          <div className="advanced-panel card">
+            <label className="switch">
+              <input type="checkbox" checked={nsfw} onChange={(e) => setNsfw(e.target.checked)} />
+              Show NSFW / toxic
+            </label>
+            <label className="switch">
+              <input type="checkbox" checked={onlyStanceable} onChange={(e) => setOnlyStanceable(e.target.checked)} />
+              Require stance flag
+            </label>
           </div>
-          <div className="dist-wrap">
-            <div className="dist-label">Debate Distribution</div>
-            <div className="distbar">
+        )}
+
+        {savedItems.length > 0 && (
+          <section className="saved card">
+            <div className="saved-header">
+              <h3>Saved posts ({savedItems.length})</h3>
+              <button type="button" onClick={() => setSavedItems([])}>Clear all</button>
+            </div>
+            <div className="saved-grid">
+              {savedItems.map((entry) => (
+                <ResultCard
+                  key={`saved-${entry.id}`}
+                  item={entry}
+                  stance={entry.savedStance || entry.stance_label || "none"}
+                  saved
+                  onToggleSave={handleToggleSave}
+                />
+              ))}
+            </div>
+          </section>
+        )}
+
+        <section className="insights">
+          <div className="insight-grid">
+            <Metric label="Total Posts" value={counts.favor + counts.against + counts.none} hint="Across all stances" dist={dist} />
+            <Metric label="Supporting" value={counts.favor} hint={`${(dist.favor * 100).toFixed(0)}% of debate`} dist={{ favor: 1, against: 0, none: 0 }} />
+            <Metric label="Opposing" value={counts.against} hint={`${(dist.against * 100).toFixed(0)}% of debate`} dist={{ favor: 0, against: 1, none: 0 }} />
+            <Metric label="Neutral" value={counts.none} hint={`${(dist.none * 100).toFixed(0)}% of debate`} dist={{ favor: 0, against: 0, none: 1 }} />
+          </div>
+          <div className="dist-card card">
+            <div className="dist-header">
+              <h3>Debate distribution</h3>
+              <span className="muted small">Share of returned posts</span>
+            </div>
+            <div className="distbar large">
               <div className="seg favor" style={{ width: `${dist.favor * 100}%` }} />
               <div className="seg against" style={{ width: `${dist.against * 100}%` }} />
               <div className="seg none" style={{ width: `${dist.none * 100}%` }} />
             </div>
           </div>
-        </div>
+        </section>
 
-        {/* Results */}
         {counts.favor + counts.against + counts.none === 0 ? (
           <div className="empty">Type a topic and hit Search to explore the debate.</div>
         ) : mode === "grid" ? (
           <>
+            <div className="section-heading">
+              <div>
+                <p className="eyebrow">Debate threads</p>
+                <h3>Scan every stance side-by-side</h3>
+              </div>
+              <span className="muted small">Sorted by {sortLabel}</span>
+            </div>
             <div className="grid3">
               {stanceOrder.map((s) => (
-                <div key={s}>
+                <div key={s} className={`stance-column stance-${s}`}>
                   <div className={`panel-h ${stanceColorClass[s]}`}>
                     <strong>{stanceLabel[s]}</strong> <Chip>{(rendered[s] || []).length} posts</Chip>
                   </div>
                   {(rendered[s] || []).map((it) => (
-                    <ResultCard key={it.id} item={it} stance={s} />
+                    <ResultCard
+                      key={it.id}
+                      item={it}
+                      stance={s}
+                      saved={savedIds.has(it.id)}
+                      onToggleSave={handleToggleSave}
+                    />
                   ))}
                 </div>
               ))}
@@ -259,29 +457,39 @@ export default function App() {
           </>
         ) : (
           <div className="compare2">
-            {/* left: favor */}
-            <div>
+            <div className="stance-column stance-favor">
               <div className={`panel-h ${stanceColorClass["favor"]}`}>
                 <strong>{stanceLabel["favor"]}</strong>{" "}
                 <Chip>{(rendered["favor"] || []).length} posts</Chip>
               </div>
               {(rendered["favor"] || []).map((it) => (
-                <ResultCard key={it.id} item={it} stance="favor" />
+                <ResultCard
+                  key={it.id}
+                  item={it}
+                  stance="favor"
+                  saved={savedIds.has(it.id)}
+                  onToggleSave={handleToggleSave}
+                />
               ))}
             </div>
-            {/* right: against */}
-            <div>
+            <div className="stance-column stance-against">
               <div className={`panel-h ${stanceColorClass["against"]}`}>
                 <strong>{stanceLabel["against"]}</strong>{" "}
                 <Chip>{(rendered["against"] || []).length} posts</Chip>
               </div>
               {(rendered["against"] || []).map((it) => (
-                <ResultCard key={it.id} item={it} stance="against" />
+                <ResultCard
+                  key={it.id}
+                  item={it}
+                  stance="against"
+                  saved={savedIds.has(it.id)}
+                  onToggleSave={handleToggleSave}
+                />
               ))}
             </div>
           </div>
         )}
-      </div>
+      </main>
     </div>
   );
 }

@@ -1,96 +1,101 @@
 #!/usr/bin/env python3
-import os, json, time
+"""
+Index data/processed/corpus.jsonl into OpenSearch index `debate_docs`,
+including the quality_score field so we can boost high-quality comments.
+"""
+
+import json
 from pathlib import Path
+from typing import Iterable
+
 from opensearchpy import OpenSearch, helpers
 
-ROOT = Path(__file__).resolve().parents[1]
-PROCESSED = ROOT / "data" / "processed"
-CORPUS_PATH = os.getenv("MERGED_PATH", str(PROCESSED / "corpus.jsonl"))
+ROOT = Path(__file__).resolve().parents[1]   # DebateSearch/
+DATA_DIR = ROOT / "data"                     # DebateSearch/data/
+CORPUS_PATH = DATA_DIR / "processed" / "corpus.jsonl"
 
-OS_URL = os.getenv("OS_URL", "http://localhost:9200")
-INDEX = os.getenv("OS_INDEX", "debate_docs")
+INDEX_NAME = "debate_docs"
 
-client = OpenSearch(OS_URL)
 
-MAPPING = {
-    "settings": {
-        "index": {"number_of_shards": 1, "number_of_replicas": 0},
-        "analysis": {
-            "analyzer": {"english_custom": {"type": "standard", "stopwords": "_english_"}}
+def get_client() -> OpenSearch:
+    return OpenSearch(
+        hosts=[{"host": "localhost", "port": 9200}],
+        http_auth=("admin", "admin"),
+        scheme="http",
+        verify_certs=False,
+    )
+
+
+def ensure_index(client: OpenSearch):
+    if client.indices.exists(INDEX_NAME):
+        print(f"Index {INDEX_NAME} already exists")
+        return
+
+    mapping = {
+        "settings": {
+            "number_of_shards": 1,
+            "number_of_replicas": 0,
         },
-    },
-    "mappings": {
-        "properties": {
-            "title": {"type": "text", "analyzer": "english"},
-            "body": {"type": "text", "analyzer": "english"},
-            "text": {"type": "text", "analyzer": "english"},
-            "source": {"type": "keyword"},
-            "url": {"type": "keyword"},
-            "timestamp": {"type": "date"},
-            "nsfw": {"type": "boolean"},
-            "pii_masked": {"type": "boolean"},
-            # optional older fields
-            "subreddit": {"type": "keyword"},
-            "created_utc": {"type": "date", "format": "epoch_second"},
-            "score": {"type": "integer"},
-            "target": {"type": "keyword"},
-            "stance_gold": {"type": "keyword"},
-        }
-    },
-}
+        "mappings": {
+            "properties": {
+                "id": {"type": "keyword"},
+                "title": {"type": "text"},
+                "body": {"type": "text"},
+                "source": {"type": "keyword"},
+                "subreddit": {"type": "keyword"},
+                "created_utc": {"type": "date", "format": "epoch_second"},
+                "score": {"type": "integer"},
+                "quality_score": {"type": "float"},
+                "target": {"type": "keyword"},
+                "stance_gold": {"type": "keyword"},
+            }
+        },
+    }
 
-def ensure_index():
-    if not client.indices.exists(index=INDEX):
-        client.indices.create(index=INDEX, body=MAPPING)
-        print(f"🆕 Created index {INDEX}")
-    else:
-        print(f"ℹ️  Index {INDEX} already exists")
+    client.indices.create(index=INDEX_NAME, body=mapping)
+    print(f" Created index {INDEX_NAME}")
 
-def actions(corpus_path: str):
-    with open(corpus_path, "r", encoding="utf-8") as f:
-        for i, line in enumerate(f, 1):
+
+def gen_actions(path: Path) -> Iterable[dict]:
+    with path.open("r", encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if not line:
+                continue
             try:
                 doc = json.loads(line)
             except json.JSONDecodeError:
                 continue
 
-            # --- normalize fields before indexing ---
-            doc.setdefault("title", doc.get("title") or doc.get("text","")[:80])
-            doc.setdefault("text",  doc.get("text")  or doc.get("body",""))
-            doc.setdefault("source", doc.get("source","web"))
-            doc.setdefault("nsfw", bool(doc.get("nsfw", False)))
-            doc.setdefault("pii_masked", bool(doc.get("pii_masked", False)))
-            doc.setdefault("quality_score", float(doc.get("quality_score", 0.0)))
-            doc.setdefault("stanceable", bool(doc.get("stanceable", True)))
+            doc_id = doc.get("id")
+            if not doc_id:
+                continue
 
-            if doc["quality_score"] < 0.50 or not doc["stanceable"]:
-                continue  # skip indexing the junk
-
-
-            _id = doc.get("id") or f"doc-{i}"
             yield {
-                "_index": INDEX,
-                "_id": _id,
+                "_index": INDEX_NAME,
+                "_id": doc_id,
                 "_source": doc,
             }
 
+
 def main():
-    ensure_index()
-    start = time.time()
-    total = 0
-    for ok, info in helpers.streaming_bulk(
+    if not CORPUS_PATH.exists():
+        raise SystemExit(f"Missing corpus file: {CORPUS_PATH}")
+
+    client = get_client()
+    ensure_index(client)
+
+    print(f"→ Indexing from {CORPUS_PATH}")
+    success, failed = helpers.bulk(
         client,
-        actions(CORPUS_PATH),
-        chunk_size=1000,
-        max_retries=3,
-        raise_on_error=False,
-    ):
-        total += 1
-        if total % 10000 == 0:
-            print(f"… indexed {total:,} docs")
-    secs = time.time() - start
-    print(f"Done. Indexed ~{total:,} docs in {secs:.1f}s → index={INDEX}")
+        gen_actions(CORPUS_PATH),
+        chunk_size=2000,
+        request_timeout=120,
+        stats_only=True,
+    )
+
+    print(f" Indexed {success:,} docs, failed={failed}")
+
 
 if __name__ == "__main__":
-    print(f"Using corpus: {CORPUS_PATH}")
     main()
