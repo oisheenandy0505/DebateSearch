@@ -51,6 +51,19 @@ function partitionBySource(items, src) {
   return items.filter((x) => normalizeSource(x.source) === needle);
 }
 
+function sourceLabelText(value) {
+  const normalized = normalizeSource(value);
+  if (normalized === "reddit") return "Reddit";
+  if (normalized === "semeval") return "Twitter/SemEval";
+  if (!value) return "Mixed sources";
+  return String(value).replace(/^[a-z]/, (c) => c.toUpperCase());
+}
+
+function formatPercent(value, digits = 0) {
+  if (typeof value !== "number" || Number.isNaN(value)) return "—";
+  return `${(value * 100).toFixed(digits)}%`;
+}
+
 function sortItems(items, sortBy) {
   if (sortBy === "recent") {
     // Sort newest first when timestamps exist; fall back to stable ordering.
@@ -68,22 +81,67 @@ function Chip({ children }) {
   return <span className="chip">{children}</span>;
 }
 
-function Metric({ label, value, hint, dist }) {
-  // dist is a {favor,against,none} fraction map.
-  const f = Math.max(0, Math.min(1, dist?.favor || 0));
-  const a = Math.max(0, Math.min(1, dist?.against || 0));
-  const n = Math.max(0, Math.min(1, dist?.none || 0));
+function Metric({
+  label,
+  value,
+  description,
+  hint,
+  bar,
+  delta,
+  stats = [],
+  active = false,
+  onSelect,
+  tooltip,
+}) {
+  const isInteractive = typeof onSelect === "function";
+  const className = [
+    "metric",
+    active ? "active" : "",
+    isInteractive ? "clickable" : "",
+  ]
+    .filter(Boolean)
+    .join(" ");
   return (
-    <div className="metric">
-      <div className="metric-label">{label}</div>
-      <div className="metric-value">{value}</div>
-      {hint && <div className="metric-hint">{hint}</div>}
-      <div className="sparkbar" title={`For ${f * 100 | 0}% · Against ${a * 100 | 0}% · Neutral ${n * 100 | 0}%`}>
-        <div className="seg favor" style={{ width: `${f * 100}%` }} />
-        <div className="seg against" style={{ width: `${a * 100}%` }} />
-        <div className="seg none" style={{ width: `${n * 100}%` }} />
+    <button
+      type="button"
+      className={className}
+      onClick={onSelect}
+      aria-pressed={active}
+      title={tooltip}
+    >
+      <div className="metric-header">
+        <div className="metric-label">{label}</div>
+        {delta && <span className="metric-delta">{delta}</span>}
       </div>
-    </div>
+      <div className="metric-value">{value}</div>
+      {description && <div className="metric-desc">{description}</div>}
+      {hint && <div className="metric-hint">{hint}</div>}
+      {bar && (
+        <div className="sparkbar" role="presentation">
+          {bar.map((seg) => {
+            const pct = Math.max(0, Math.min(100, (seg.percent || 0) * 100));
+            return (
+              <div
+                key={seg.key}
+                className={`seg ${seg.className || ""}`}
+                style={{ width: `${pct}%` }}
+                title={seg.label}
+              />
+            );
+          })}
+        </div>
+      )}
+      {stats.length > 0 && (
+        <div className="metric-stats">
+          {stats.map((stat) => (
+            <div key={`${label}-${stat.label}`} className="metric-stat">
+              <span className="metric-stat-label">{stat.label}</span>
+              <span className="metric-stat-value">{stat.value}</span>
+            </div>
+          ))}
+        </div>
+      )}
+    </button>
   );
 }
 
@@ -96,6 +154,11 @@ function ResultCard({ item, stance, saved = false, onToggleSave }) {
   const confidence = typeof item.conf === "number" ? item.conf.toFixed(2) : null;
   const stanceSource = item.stance_source || null;
   const sourceLabel = String(item.source || "dataset").replace(/^[a-z]/, (c) => c.toUpperCase());
+
+  const textClass = ["card-text"];
+  if (isLong) {
+    textClass.push(expanded ? "expanded" : "clamped");
+  }
 
   return (
     <div className={`card card-${stanceColorClass[stance]}`}>
@@ -121,7 +184,7 @@ function ResultCard({ item, stance, saved = false, onToggleSave }) {
         </div>
       </div>
 
-      <div className={`card-text ${expanded ? "expanded" : "clamped"}`}>
+      <div className={textClass.join(" ")}>
         {text}
       </div>
       {isLong && (
@@ -166,6 +229,7 @@ export default function App() {
   const [showAdvanced, setShowAdvanced] = useState(false);
   const [density, setDensity] = useState("cozy"); // "cozy" | "compact"
   const [savedItems, setSavedItems] = useState([]);
+  const [stanceFilter, setStanceFilter] = useState(null); // "favor" | "against" | "none" | null
   const qref = useRef(null);
 
   const counts = useMemo(() => {
@@ -173,6 +237,72 @@ export default function App() {
     (clusters || []).forEach((c) => (map[c.stance] = c.items?.length || 0));
     return map;
   }, [clusters]);
+
+  const stanceBuckets = useMemo(() => {
+    const map = {};
+    (clusters || []).forEach((cluster) => {
+      if (stanceOrder.includes(cluster.stance)) {
+        map[cluster.stance] = cluster;
+      }
+    });
+    return map;
+  }, [clusters]);
+
+  const datasetMix = useMemo(() => {
+    const mix = { reddit: 0, semeval: 0, other: 0 };
+    (clusters || []).forEach((cluster) => {
+      (cluster.items || []).forEach((item) => {
+        const src = normalizeSource(item.source);
+        if (src === "reddit") mix.reddit += 1;
+        else if (src === "semeval") mix.semeval += 1;
+        else mix.other += 1;
+      });
+    });
+    const total = mix.reddit + mix.semeval + mix.other || 1;
+    return {
+      counts: mix,
+      percent: {
+        reddit: mix.reddit / total,
+        semeval: mix.semeval / total,
+        other: mix.other / total,
+      },
+    };
+  }, [clusters]);
+
+  const stanceMeta = useMemo(() => {
+    const meta = {};
+    stanceOrder.forEach((stance) => {
+      const bucket = stanceBuckets[stance];
+      const items = bucket?.items || [];
+      if (!items.length) {
+        meta[stance] = { avgConf: null, topSource: "No posts", avgLength: null };
+        return;
+      }
+      let confSum = 0;
+      let confCount = 0;
+      const sourceCounts = {};
+      let lengthSum = 0;
+      items.forEach((item) => {
+        if (typeof item.conf === "number") {
+          confSum += item.conf;
+          confCount += 1;
+        }
+        const src = normalizeSource(item.source) || "other";
+        sourceCounts[src] = (sourceCounts[src] || 0) + 1;
+        const text = (item.text || item.body || "").trim();
+        lengthSum += text.length;
+      });
+      const avgConf = confCount ? confSum / confCount : null;
+      const topSourceKey = Object.entries(sourceCounts)
+        .sort((a, b) => b[1] - a[1])[0]?.[0];
+      meta[stance] = {
+        avgConf,
+        topSource: topSourceKey ? sourceLabelText(topSourceKey) : "Mixed sources",
+        avgLength: lengthSum ? Math.round(lengthSum / items.length) : null,
+      };
+    });
+    return meta;
+  }, [stanceBuckets]);
 
   const dist = useMemo(() => {
     const total = counts.favor + counts.against + counts.none || 1;
@@ -182,6 +312,33 @@ export default function App() {
       none: counts.none / total,
     };
   }, [counts]);
+  const totalPosts = counts.favor + counts.against + counts.none;
+  const stanceStats = stanceOrder.map((stance) => ({
+    stance,
+    label: stanceLabel[stance],
+    count: counts[stance],
+    share: dist[stance],
+    avgConf: stanceMeta[stance]?.avgConf ?? null,
+    avgLength: stanceMeta[stance]?.avgLength ?? null,
+    topSource: stanceMeta[stance]?.topSource ?? "Mixed sources",
+  }));
+  const stanceStatsMap = useMemo(() => {
+    const map = {};
+    stanceStats.forEach((entry) => {
+      map[entry.stance] = entry;
+    });
+    return map;
+  }, [stanceStats]);
+  const dominance = (() => {
+    const sorted = [...stanceStats].sort((a, b) => b.count - a.count);
+    const leader = sorted[0];
+    const runnerUp = sorted[1];
+    if (!leader || !runnerUp || leader.count === runnerUp.count) return { stance: null, message: null };
+    return {
+      stance: leader.stance,
+      message: `+${leader.count - runnerUp.count} vs ${runnerUp.label}`,
+    };
+  })();
 
   async function doSearch(nextQuery) {
     const activeQuery = (typeof nextQuery === "string" ? nextQuery : query).trim();
@@ -229,7 +386,12 @@ export default function App() {
     return filteredSorted;
   }, [clusters, selectedSource, sortBy]);
   const sortLabel = sortBy === "recent" ? "Most recent" : "Confidence";
+  const visibleStances = stanceFilter ? [stanceFilter] : stanceOrder;
   const savedIds = useMemo(() => new Set(savedItems.map((it) => it.id)), [savedItems]);
+
+  function handleFocusStance(next) {
+    setStanceFilter((prev) => (prev === next ? null : next));
+  }
 
   function handleToggleSave(item, stance) {
     if (!item?.id) return;
@@ -377,20 +539,71 @@ export default function App() {
 
         <section className="insights">
           <div className="insight-grid">
-            <Metric label="Total Posts" value={counts.favor + counts.against + counts.none} hint="Across all stances" dist={dist} />
-            <Metric label="Supporting" value={counts.favor} hint={`${(dist.favor * 100).toFixed(0)}% of debate`} dist={{ favor: 1, against: 0, none: 0 }} />
-            <Metric label="Opposing" value={counts.against} hint={`${(dist.against * 100).toFixed(0)}% of debate`} dist={{ favor: 0, against: 1, none: 0 }} />
-            <Metric label="Neutral" value={counts.none} hint={`${(dist.none * 100).toFixed(0)}% of debate`} dist={{ favor: 0, against: 0, none: 1 }} />
+            <Metric
+              label="Total posts"
+              value={totalPosts}
+              description="Across all stances"
+              hint={`${counts.favor} supporting · ${counts.against} opposing · ${counts.none} neutral`}
+              bar={stanceOrder.map((stance) => ({
+                key: `total-${stance}`,
+                percent: dist[stance],
+                className: stanceColorClass[stance],
+                label: `${stanceLabel[stance]} ${(dist[stance] * 100).toFixed(0)}%`,
+              }))}
+              stats={[
+                { label: "Reddit", value: formatPercent(datasetMix.percent.reddit) },
+                { label: "Twitter/SemEval", value: formatPercent(datasetMix.percent.semeval) },
+                { label: "Other", value: formatPercent(datasetMix.percent.other) },
+              ]}
+              active={!stanceFilter}
+              onSelect={() => handleFocusStance(null)}
+              tooltip="Click to reset stance focus"
+            />
+            {stanceOrder.map((stance) => (
+              <Metric
+                key={`metric-${stance}`}
+                label={stanceLabel[stance]}
+                value={counts[stance]}
+                description="Share of debate"
+                hint={`${(dist[stance] * 100).toFixed(0)}% of ${totalPosts || 0} posts`}
+                delta={dominance.stance === stance ? dominance.message : null}
+                stats={[
+                  {
+                    label: "Avg conf",
+                    value: stanceStatsMap[stance]?.avgConf != null ? formatPercent(stanceStatsMap[stance].avgConf, 0) : "—",
+                  },
+                  { label: "Top source", value: stanceStatsMap[stance]?.topSource || "Mixed" },
+                ]}
+                active={stanceFilter === stance}
+                onSelect={() => handleFocusStance(stance)}
+                tooltip="Toggle focus on this stance"
+              />
+            ))}
           </div>
           <div className="dist-card card">
             <div className="dist-header">
-              <h3>Debate distribution</h3>
-              <span className="muted small">Share of returned posts</span>
+              <div>
+                <h3>Stance momentum</h3>
+                <span className="muted small">Share & average confidence</span>
+              </div>
+              <span className="muted small">{totalPosts} posts</span>
             </div>
-            <div className="distbar large">
-              <div className="seg favor" style={{ width: `${dist.favor * 100}%` }} />
-              <div className="seg against" style={{ width: `${dist.against * 100}%` }} />
-              <div className="seg none" style={{ width: `${dist.none * 100}%` }} />
+            <div className="dist-mini-grid">
+              {stanceStats.map((entry) => (
+                <div key={`mini-${entry.stance}`} className="dist-mini">
+                  <div className="dist-mini-top">
+                    <span>{entry.label}</span>
+                    <strong>{formatPercent(entry.share)}</strong>
+                  </div>
+                  <div className="dist-mini-bar" role="presentation" title={`${entry.label} share`}>
+                    <div className={`seg ${stanceColorClass[entry.stance]}`} style={{ width: `${entry.share * 100}%` }} />
+                  </div>
+                  <div className="dist-mini-meta">
+                    <span>{entry.count} posts</span>
+                    <span>{entry.avgConf != null ? `Avg conf ${formatPercent(entry.avgConf, 0)}` : "No confidence data"}</span>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -402,12 +615,15 @@ export default function App() {
             <div className="section-heading">
               <div>
                 <p className="eyebrow">Debate threads</p>
-                <h3>Scan every stance side-by-side</h3>
+                <h3>{stanceFilter ? `Focus: ${stanceLabel[stanceFilter]}` : "Scan every stance side-by-side"}</h3>
               </div>
-              <span className="muted small">Sorted by {sortLabel}</span>
+              <span className="muted small">
+                {stanceFilter ? "Click Total to clear focus · " : ""}
+                Sorted by {sortLabel}
+              </span>
             </div>
             <div className="grid3">
-              {stanceOrder.map((s) => (
+              {visibleStances.map((s) => (
                 <div key={s} className={`stance-column stance-${s}`}>
                   <div className={`panel-h ${stanceColorClass[s]}`}>
                     <strong>{stanceLabel[s]}</strong> <Chip>{(rendered[s] || []).length} posts</Chip>
@@ -427,36 +643,23 @@ export default function App() {
           </>
         ) : (
           <div className="compare2">
-            <div className="stance-column stance-favor">
-              <div className={`panel-h ${stanceColorClass["favor"]}`}>
-                <strong>{stanceLabel["favor"]}</strong>{" "}
-                <Chip>{(rendered["favor"] || []).length} posts</Chip>
+            {(stanceFilter ? [stanceFilter] : ["favor", "against"]).map((stance) => (
+              <div key={`compare-${stance}`} className={`stance-column stance-${stance}`}>
+                <div className={`panel-h ${stanceColorClass[stance]}`}>
+                  <strong>{stanceLabel[stance]}</strong>{" "}
+                  <Chip>{(rendered[stance] || []).length} posts</Chip>
+                </div>
+                {(rendered[stance] || []).map((it) => (
+                  <ResultCard
+                    key={it.id}
+                    item={it}
+                    stance={stance}
+                    saved={savedIds.has(it.id)}
+                    onToggleSave={handleToggleSave}
+                  />
+                ))}
               </div>
-              {(rendered["favor"] || []).map((it) => (
-                <ResultCard
-                  key={it.id}
-                  item={it}
-                  stance="favor"
-                  saved={savedIds.has(it.id)}
-                  onToggleSave={handleToggleSave}
-                />
-              ))}
-            </div>
-            <div className="stance-column stance-against">
-              <div className={`panel-h ${stanceColorClass["against"]}`}>
-                <strong>{stanceLabel["against"]}</strong>{" "}
-                <Chip>{(rendered["against"] || []).length} posts</Chip>
-              </div>
-              {(rendered["against"] || []).map((it) => (
-                <ResultCard
-                  key={it.id}
-                  item={it}
-                  stance="against"
-                  saved={savedIds.has(it.id)}
-                  onToggleSave={handleToggleSave}
-                />
-              ))}
-            </div>
+            ))}
           </div>
         )}
       </main>

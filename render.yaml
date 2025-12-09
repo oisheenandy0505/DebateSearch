@@ -1,27 +1,4 @@
 services:
-  - type: private_service
-    name: debate-opensearch
-    env: docker
-    plan: starter-plus
-    image: opensearchproject/opensearch:2.14.0
-    disk:
-      name: os-data
-      mountPath: /usr/share/opensearch/data
-      sizeGB: 2
-    envVars:
-      - key: discovery.type
-        value: single-node
-      - key: plugins.security.disabled
-        value: "true"
-      - key: DISABLE_PERFORMANCE_ANALYZER
-        value: "true"
-      - key: OPENSEARCH_INITIAL_ADMIN_PASSWORD
-        value: s0meStr0ngPass!
-      - key: bootstrap.memory_lock
-        value: "true"
-      - key: OPENSEARCH_JAVA_OPTS
-        value: -Xms1g -Xmx1g
-
   - type: web
     name: debate-backend
     env: python

@@ -1,14 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap");
 
 /* src/App.css
    Light theme + Dashboard → Grid/Comparison UI
    ---------------------------------------------------------- */
 
 body {
-  font-family: "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: "IBM Plex Sans", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   -webkit-font-smoothing: antialiased;
   margin: 0;
-  background: #fefcf8;
+  background: #f5f2ec;
 }
 
 .app-header {
@@ -35,17 +35,17 @@ body {
 
 /* App shell (light) */
 .app.light {
-  --bg: #f9f6f1;
+  --bg: #f5f2ec;
   --panel: #ffffff;
-  --ink: #272b38;
-  --muted: #7a7f90;
-  --ring: #e3ddd2;
-  --accent: #7a85a3;
-  --accent-soft: #ebe8df;
+  --ink: #1f2430;
+  --muted: #6d7282;
+  --ring: #dcd6c8;
+  --accent: #4c5773;
+  --accent-soft: #e4e0d6;
 
-  --for: #6bb79a;
-  --against: #ef8c82;
-  --neutral: #f0d58c;
+  --for: #4d9a7b;
+  --against: #d6695d;
+  --neutral: #d9b25f;
 
   background: var(--bg);
   color: var(--ink);
@@ -63,9 +63,9 @@ body {
   height: 48px;
   display: grid;
   place-items: center;
-  border-radius: 16px;
-  background: linear-gradient(135deg, #f7cda0, #c8d5d0);
-  color: #2a2f3c;
+  border-radius: 12px;
+  background: #1f2430;
+  color: #f5f2ec;
   font-size: 24px;
 }
 
@@ -255,11 +255,11 @@ body {
 
 .card {
   background: var(--panel);
-  border: 1px solid var(--ring);
-  border-radius: 16px;
-  padding: 16px;
-  margin: 12px 0;
-  box-shadow: 0 8px 20px rgba(20, 24, 36, 0.04);
+  border: 1px solid rgba(31, 36, 48, 0.08);
+  border-radius: 14px;
+  padding: 20px;
+  margin: 16px 0;
+  box-shadow: 0 6px 18px rgba(17, 23, 40, 0.05);
 }
 
 .insights {
@@ -297,34 +297,103 @@ body {
 
 .insight-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 12px;
 }
 
 .metric {
-  background: linear-gradient(180deg, #fff, #f6f8ff);
-  border: 1px solid var(--ring);
+  background: #fcfbf9;
+  border: 1px solid rgba(31, 36, 48, 0.08);
   border-radius: 16px;
   padding: 12px 14px;
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.4);
+  box-shadow: 0 6px 16px rgba(17, 23, 40, 0.06);
+  font: inherit;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  cursor: default;
+  color: inherit;
+  appearance: none;
+}
+
+.metric.clickable {
+  cursor: pointer;
+}
+
+.metric:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.metric.active {
+  border-color: var(--accent);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.7), 0 0 0 2px rgba(70, 99, 235, 0.08);
+}
+
+.metric-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
 }
 
 .metric-label {
   color: var(--muted);
   font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.metric-delta {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--accent);
+  background: var(--accent-soft);
+  border-radius: 999px;
+  padding: 2px 8px;
 }
 
 .metric-value {
-  font-size: 22px;
+  font-size: 26px;
   font-weight: 700;
   line-height: 1.1;
-  margin-top: 2px;
+}
+
+.metric-desc {
+  font-size: 12px;
+  color: var(--ink);
 }
 
 .metric-hint {
   color: var(--muted);
   font-size: 12px;
-  margin-top: 2px;
+}
+
+.metric-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  margin-top: 6px;
+}
+
+.metric-stat {
+  display: flex;
+  flex-direction: column;
+  min-width: 90px;
+}
+
+.metric-stat-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+
+.metric-stat-value {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
 }
 
 .dist-card {
@@ -343,32 +412,60 @@ body {
   margin: 0;
 }
 
-.distbar {
+.dist-mini-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.dist-mini {
+  border: 1px solid rgba(31, 36, 48, 0.08);
+  border-radius: 12px;
+  padding: 10px 12px;
+  background: #fffdfa;
+}
+
+.dist-mini-top {
   display: flex;
-  height: 10px;
-  overflow: hidden;
+  justify-content: space-between;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.dist-mini-top strong {
+  color: var(--ink);
+  font-size: 18px;
+}
+
+.dist-mini-bar {
+  margin: 8px 0 6px;
+  height: 8px;
+  background: #ece7de;
   border-radius: 999px;
-  background: #e9eef6;
+  overflow: hidden;
 }
 
-.distbar.large {
-  height: 16px;
-}
-
-.distbar .seg {
+.dist-mini-bar .seg {
   height: 100%;
 }
 
-.distbar .favor {
+.dist-mini-bar .favor {
   background: var(--for);
 }
 
-.distbar .against {
+.dist-mini-bar .against {
   background: var(--against);
 }
 
-.distbar .none {
+.dist-mini-bar .none {
   background: var(--neutral);
+}
+
+.dist-mini-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: var(--muted);
 }
 
 /* -------------------- Layouts -------------------- */
@@ -376,13 +473,13 @@ body {
 .grid3 {
   display: grid;
   gap: 16px;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
 
 .compare2 {
   display: grid;
   gap: 16px;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   align-items: flex-start;
 }
 
@@ -412,24 +509,24 @@ body {
 
 .stance-column {
   border: 1px solid rgba(15, 23, 42, 0.08);
-  border-radius: 22px;
+  border-radius: 18px;
   padding: 12px 14px 6px;
-  background: rgba(255, 255, 255, 0.8);
+  background: var(--panel);
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
 
 .stance-column.stance-favor {
-  background: linear-gradient(180deg, rgba(24, 169, 87, 0.08), rgba(255, 255, 255, 0.9));
+  border-color: rgba(77, 154, 123, 0.3);
 }
 
 .stance-column.stance-against {
-  background: linear-gradient(180deg, rgba(226, 58, 58, 0.08), rgba(255, 255, 255, 0.9));
+  border-color: rgba(214, 105, 93, 0.3);
 }
 
 .stance-column.stance-none {
-  background: linear-gradient(180deg, rgba(241, 185, 11, 0.08), rgba(255, 255, 255, 0.95));
+  border-color: rgba(217, 178, 95, 0.35);
 }
 
 /* Column headers */
@@ -705,6 +802,7 @@ body {
 .sparkbar .favor { background: var(--for); }
 .sparkbar .against { background: var(--against); }
 .sparkbar .none { background: var(--neutral); }
+.sparkbar .seg.muted { background: rgba(15, 23, 42, 0.12); }
 
 /* Collapse long result text */
 .card-text {
