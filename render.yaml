@@ -48,8 +48,8 @@ services:
       - key: OS_INDEX
         value: debate_docs
 
-staticSites:
-  - name: debate-frontend
+  - type: static
+    name: debate-frontend
     plan: free
     rootDir: frontend
     buildCommand: npm install && npm run build
