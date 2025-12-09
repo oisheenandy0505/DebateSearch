@@ -5,6 +5,7 @@ including the quality_score field so we can boost high-quality comments.
 """
 
 import json
+import os
 from pathlib import Path
 from typing import Iterable
 
@@ -14,14 +15,19 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data"
 CORPUS_PATH = DATA_DIR / "processed" / "corpus.jsonl"
 
-INDEX_NAME = "debate_docs"
+INDEX_NAME = os.getenv("OS_INDEX", "debate_docs")
+OS_HOST = os.getenv("OS_HOST", "localhost")
+OS_PORT = int(os.getenv("OS_PORT", "9200"))
+OS_USER = os.getenv("OS_USER", "admin")
+OS_PASS = os.getenv("OS_PASS", "admin")
+OS_SCHEME = os.getenv("OS_SCHEME", "http")
 
 
 def get_client() -> OpenSearch:
     return OpenSearch(
-        hosts=[{"host": "localhost", "port": 9200}],
-        http_auth=("admin", "admin"),
-        scheme="http",
+        hosts=[{"host": OS_HOST, "port": OS_PORT}],
+        http_auth=(OS_USER, OS_PASS),
+        scheme=OS_SCHEME,
         verify_certs=False,
     )
 
