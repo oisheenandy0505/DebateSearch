@@ -119,3 +119,11 @@ Now search for a topic like “abortion” — the frontend will POST to `http:/
 - Set `BACKEND_DEBUG_LOG_PATHS=1` when launching `uvicorn` to print resolved project pathss.
 - PII redaction (`backend/ml/pii_utils.py`) masks emails, phones, IPv4 addresses, SSNs, and @handles before returning data to the UI.
 - All ingest scripts rely on the shared `quality_gate`, ensuring consistent heuristics across offline prep and online serving.
+
+## Contributors
+
+- **Charitha Battini** — Data pipeline, FastAPI backend integration
+- **Oishee Nandy** — DistilBERT + LoRA stance classifier, frontend integration  
+- **Kun** — OpenSearch, BM25 retrieval, query expansion
+
+*Built as part of a collaborative project at University of Pittsburgh, 2025*
